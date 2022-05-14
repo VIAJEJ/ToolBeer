@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_start_parkering"
+            android:icon="@drawable/parking_icon"
+            android:title="@string/menu_start_parkering" />
+        <item
+            android:id="@+id/nav_mine_parkeringer"
+            android:icon="@drawable/ic_baseline_list_24"
+            android:title="@string/menu_mine_parkeringer" />
+        <item
+            android:id="@+id/nav_om_smartpark"
+            android:icon="@drawable/company_logo_white"
+            android:title="@string/menu_om_smartpark" />
+        <item
+            android:id="@+id/nav_indstillinger"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="@string/menu_indstillinger" />
+    </group>
+</menu>

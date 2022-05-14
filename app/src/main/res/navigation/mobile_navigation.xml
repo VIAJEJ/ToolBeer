@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_start_parkering">
+
+    <fragment
+        android:id="@+id/nav_start_parkering"
+        android:name="com.androidaflevering.smartpark.ui.startparkering.StartParkeringFragment"
+        android:label="@string/menu_start_parkering"
+        tools:layout="@layout/fragment_start_parkering" />
+
+    <fragment
+        android:id="@+id/nav_mine_parkeringer"
+        android:name="com.androidaflevering.smartpark.ui.mineparkeringer.MineParkeringerFragment"
+        android:label="@string/menu_mine_parkeringer"
+        tools:layout="@layout/fragment_mine_parkeringer" />
+
+    <fragment
+        android:id="@+id/nav_om_smartpark"
+        android:name="com.androidaflevering.smartpark.ui.omsmartpark.OmOsFragment"
+        android:label="@string/menu_om_smartpark"
+        tools:layout="@layout/fragment_om_os" />
+
+    <fragment
+        android:id="@id/nav_indstillinger"
+        android:name="com.androidaflevering.smartpark.ui.indstillinger.IndstillingerFragment"
+        android:label="@string/menu_indstillinger"
+        tools:layout="@layout/fragment_indstillinger" />
+</navigation>
