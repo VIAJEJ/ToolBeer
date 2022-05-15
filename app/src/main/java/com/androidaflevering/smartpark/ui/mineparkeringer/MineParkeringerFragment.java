@@ -10,7 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.androidaflevering.smartpark.R;
 import com.androidaflevering.smartpark.databinding.FragmentMineParkeringerBinding;
+import com.androidaflevering.smartpark.ui.SignInViewModel;
 
 public class MineParkeringerFragment extends Fragment {
 
@@ -21,12 +23,14 @@ public class MineParkeringerFragment extends Fragment {
         MineParkeringerViewModel mineParkeringerViewModel =
                 new ViewModelProvider(this).get(MineParkeringerViewModel.class);
 
+
         binding = FragmentMineParkeringerBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textMineParkeringer;
+        final TextView textView = binding.editText;
         mineParkeringerViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
+
     }
 
     @Override
@@ -34,4 +38,5 @@ public class MineParkeringerFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 }

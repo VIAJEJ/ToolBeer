@@ -8,6 +8,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Bruger/AndroidStudioProjects/AndroidAflevering/SmartPark/app/src/main/res/layout/fragment_indstillinger.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/Bruger/AndroidStudioProjects/AndroidAflevering/SmartPark/app/src/main/res/layout/fragment_mine_parkeringer.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/Bruger/AndroidStudioProjects/AndroidAflevering/SmartPark/app/src/main/res/layout/mine_parkeringer.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/drawable/ic_baseline_list_24.xml" value="0.2795" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2795" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/drawable/parking_icon.xml" value="0.1" />
