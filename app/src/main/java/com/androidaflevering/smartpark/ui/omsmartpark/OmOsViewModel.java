@@ -10,7 +10,6 @@ public class OmOsViewModel extends ViewModel {
 
     public OmOsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
     }
 
     public LiveData<String> getText() {

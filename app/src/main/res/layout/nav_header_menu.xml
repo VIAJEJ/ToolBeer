@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:onClick="signOut"
-        android:text="SIGN OUT"
+        android:text="@string/sign_out_knap"
         android:background="@color/colorPrimaryDark"
         android:textColorHighlight="#786C6C"
         app:layout_constraintBottom_toBottomOf="parent"

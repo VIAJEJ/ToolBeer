@@ -10,7 +10,6 @@ public class MineParkeringerViewModel extends ViewModel {
 
     public MineParkeringerViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
     }
 
     public LiveData<String> getText() {

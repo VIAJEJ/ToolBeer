@@ -1,6 +1,7 @@
 package com.androidaflevering.smartpark.ui;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -10,6 +11,7 @@ import com.androidaflevering.smartpark.R;
 
 //MenuActivity
 
+import com.androidaflevering.smartpark.ui.startparkering.StartParkeringFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
         viewModel.init();
         checkIfSignedIn();
-        setContentView(R.layout.activity_main2); //Tjek den her
+        setContentView(R.layout.signin_activity);
 
         //Menuactivity
         binding = ActivityMenuBinding.inflate(getLayoutInflater());
@@ -46,8 +48,10 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMenu.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=Parkering nearby");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
