@@ -42,4 +42,4 @@ Gennem hele udarbejdelsen af appen, har der været systematiske tests med 15 min
 
 
 12. Jeg vil gerne kunne lukke appen og stadig være logget ind, når jeg åbner den igen.
-- Hertil er der benyttet firebase, hvortil der gøres brug af firebase's eget system, som gør det muligt for appen at gemme brugerens id
+- Hertil er der benyttet firebase, hvortil der gøres brug af firebase's eget system, som gør det muligt for appen at gemme brugerens id.
