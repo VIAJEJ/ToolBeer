@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,19 +8,52 @@
     android:orientation="vertical"
     tools:context=".ui.indstillinger.IndstillingerFragment">
 
+
     <TextView
         android:id="@+id/vaelgSprog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginBottom="688dp"
         android:text="@string/vaelg_sprog"
         android:textColor="@color/colorAccent"
         android:textSize="20sp"
-        android:textStyle="bold">
-        </TextView>
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
 
+    <ImageView
+        android:id="@+id/imageButton_Danish"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="106dp"
+        android:contentDescription="@string/dansk_flag"
+        android:src="@drawable/Dansk_flag"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_English"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
-    <RadioGroup
+    <ImageView
+        android:id="@+id/imageButton_English"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="564dp"
+        android:contentDescription="@string/engelsk_flag"
+        android:src="@drawable/Engelsk_flag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <!--<RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -43,6 +76,6 @@
         android:text="@string/english"
         android:padding="8dp"/>
 
-</RadioGroup>
+</RadioGroup>-->
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

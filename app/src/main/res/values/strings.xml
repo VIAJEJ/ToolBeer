@@ -24,5 +24,7 @@
     <string name="english">Engelsk</string>
     <string name="smartpark_logo">SmartPark_Logo</string>
     <string name="logget_ud_toast">Logget ud</string>
+    <string name="dansk_flag">Dansk flag</string>
+    <string name="engelsk_flag">Engelsk flag</string>
 
 </resources>

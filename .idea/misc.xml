@@ -8,28 +8,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Bruger/AndroidStudioProjects/AndroidAflevering/SmartPark/app/src/main/res/layout/fragment_indstillinger.xml" value="0.25052083333333336" />
-        <entry key="..\:/Users/Bruger/AndroidStudioProjects/AndroidAflevering/SmartPark/app/src/main/res/layout/fragment_mine_parkeringer.xml" value="0.25052083333333336" />
-        <entry key="..\:/Users/Bruger/AndroidStudioProjects/AndroidAflevering/SmartPark/app/src/main/res/layout/mine_parkeringer.xml" value="0.21354166666666666" />
-        <entry key="..\:/Users/Bruger/AndroidStudioProjects/AndroidAflevering/SmartPark/app/src/main/res/layout/parking.xml" value="0.13703703703703704" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/drawable/ic_baseline_list_24.xml" value="0.2795" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2795" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/drawable/parking_icon.xml" value="0.1" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/activity_main2.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/activity_menu.xml" value="0.33" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/activity_menu.xml" value="0.1" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/app_bar_menu.xml" value="0.5" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/content_menu.xml" value="0.25" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/fragment_gallery.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/fragment_indstillinger.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/fragment_mine_parkeringer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/fragment_indstillinger.xml" value="0.33" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/fragment_mine_parkeringer.xml" value="0.1" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/fragment_om_os.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/fragment_slideshow.xml" value="0.22407407407407406" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/fragment_start_parkering.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/nav_header_menu.xml" value="0.33" />
-        <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/signin_activity.xml" value="0.1" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/nav_header_menu.xml" value="0.1" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/parking.xml" value="0.36102564102564105" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/layout/signin_activity.xml" value="0.25" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/AndroidAflevering/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/GoogleServicesExample/app/src/main/res/layout/activity_main.xml" value="0.33240740740740743" />

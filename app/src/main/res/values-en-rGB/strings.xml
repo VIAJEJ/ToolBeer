@@ -17,4 +17,6 @@
     <string name="smartpark_logo">SmartPark_Logo</string>
     <string name="menu_start_parkering">Start Parkering</string>
     <string name="logget_ud_toast">Signed Out</string>
+    <string name="dansk_flag">Danish flag</string>
+    <string name="engelsk_flag">English flag</string>
 </resources>
