@@ -22,15 +22,22 @@ Vi har valgt at lave en parkerings applikation, da den har mulighed for at indeh
 #### Gennemgang af requirements: ####
     
 1. Jeg vil gerne kunne oprette og logge ind som bruger
+- Her er der blevet benyttet firebase, hvortil der bliver gjort brug af firebase's egen login system, hvor der bruges networking så brugeren har muligheden for at logge ind med sin personlige Google-konto.   
+  
 2. Jeg vil gerne kunne se en liste med SmartParks samarbejdspartnere
-3. Jeg vil gerne kunne ændre sprog
 
-4. Jeg vil gerne kunne se parkeringsmuligheder tæt på min lokation
-Her er der blevet brugt en Explicit intent, som gør det muligt at åbne Google Maps og vise parkeringsmuligheder i nærheden af brugeren. Denne funktionalitet er koblet op med en floating action button. 
+4. Jeg vil gerne kunne ændre sprog
+- 
 
-5. Jeg vil gerne kunne se en liste med min historik over parkeringer 
-6. Jeg vil gerne kunne finde information om SmartPark
-7. Jeg vil gerne kunne kunne logge ud og evt. logge ind på en anden bruger
+6. Jeg vil gerne kunne se parkeringsmuligheder tæt på min lokation
+
+8. Jeg vil gerne kunne se en liste med min historik over parkeringer 
+
+10. Jeg vil gerne kunne finde information om SmartPark
+- For at kunne se information om Smartpark er der gjort brug af strings som gør det muligt at skrive på mindre plads.
+
+10. Jeg vil gerne kunne kunne logge ud og evt. logge ind på en anden bruger
 
 
-8. Jeg vil gerne kunne lukke appen og stadig være logget ind, når jeg åbner den igen.
+12. Jeg vil gerne kunne lukke appen og stadig være logget ind, når jeg åbner den igen.
+- Hertil er der benyttet firebase, hvortil der gøres brug af firebase's eget system, som gør det muligt for appen at gemme brugerens id
