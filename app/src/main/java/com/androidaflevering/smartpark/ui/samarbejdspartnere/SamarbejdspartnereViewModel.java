@@ -1,14 +1,14 @@
-package com.androidaflevering.smartpark.ui.mineparkeringer;
+package com.androidaflevering.smartpark.ui.samarbejdspartnere;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class MineParkeringerViewModel extends ViewModel {
+public class SamarbejdspartnereViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public MineParkeringerViewModel() {
+    public SamarbejdspartnereViewModel() {
         mText = new MutableLiveData<>();
     }
 

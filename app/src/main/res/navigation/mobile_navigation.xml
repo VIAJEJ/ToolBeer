@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/nav_mine_parkeringer"
-        android:name="com.androidaflevering.smartpark.ui.mineparkeringer.MineParkeringerFragment"
+        android:name="com.androidaflevering.smartpark.ui.samarbejdspartnere.SamarbejdspartnereFragment"
         android:label="@string/menu_mine_parkeringer"
-        tools:layout="@layout/fragment_mine_parkeringer" />
+        tools:layout="@layout/fragment_samarbejdspartnere" />
 
     <fragment
         android:id="@+id/nav_om_smartpark"

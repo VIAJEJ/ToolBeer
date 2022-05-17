@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
     private MainActivityViewModel viewModel;
 
-    //Menuactivity
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMenuBinding binding;
 
@@ -46,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         checkIfSignedIn();
         setContentView(R.layout.signin_activity);
 
-        //Menuactivity
         binding = ActivityMenuBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -71,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //Menuactivity
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_menu);
@@ -95,5 +92,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void signOut(View v) {
         viewModel.signOut();
+        Toast.makeText(this,getString(R.string.Singed_Out), Toast.LENGTH_SHORT).show();
     }
 }
