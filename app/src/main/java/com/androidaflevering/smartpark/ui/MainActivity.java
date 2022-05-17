@@ -50,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
         });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_start_parkering, R.id.nav_mine_parkeringer, R.id.nav_om_smartpark, R.id.nav_indstillinger)
                 .setOpenableLayout(drawer)
