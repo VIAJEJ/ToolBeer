@@ -7,13 +7,12 @@
     <string name="nav_header_desc" translatable="false">Navigation header</string>
     <string name="action_settings" translatable="false">Settings</string>
 
-    <string name="menu_mine_parkeringer">Mine Parkeringer</string>
+    <string name="menu_samarbejdspartnere">Samarbejdspartnere</string>
     <string name="menu_om_smartpark">Om SmartPark</string>
     <string name="menu_indstillinger">Indstillinger</string>
     <string name="Log_ind_knap">Log ind/registrere dig med Google</string>
     <string name="fab_find_parkering">Find Parkering Tæt På Dig</string>
     <string name="find_parkering_knap">Find Parkering</string>
-    <string name="slet_alle_parkeringer_knap">Slet alle parkeringer</string>
     <string name="Om_Os_del1">SmartPark er en applikation, som skal gøre det lettere at registere sine parkeringer</string>
     <string name="Om_Os_del2">SmartPark har base i Aarhus og har 4 ansatte. SmartPark blev grundlagt i start 2022</string>
     <string name="om_os">Om os</string>
@@ -22,7 +21,7 @@
     <string name="dansk_flag">Dansk flag</string>
     <string name="engelsk_flag">Engelsk flag</string>
     <string name="vaelg_sprog">Vælg Sprog</string>
-    <string name="menu_start_parkering">Start Parkering</string>
+    <string name="menu_find_parkering">Find Parkering</string>
     <string name="smartpark_logo" translatable="false">Logo</string>
     <string name="indtast_en_slutadresse_og_find_parkering">Indtast en slutadresse og find parkering tæt på</string>
     <string name="Singed_Out">Logget Ud</string>
