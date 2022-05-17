@@ -12,7 +12,7 @@
     <string name="menu_indstillinger">Indstillinger</string>
     <string name="Log_ind_knap">Log ind/registrere dig med Google</string>
     <string name="fab_find_parkering">Find Parkering</string>
-    <string name="tilfoej_parkering_knap">Tilføj Parkering</string>
+    <string name="find_parkering_knap">Find Parkering</string>
     <string name="slet_alle_parkeringer_knap">Slet alle parkeringer</string>
     <string name="Om_Os_del1">SmartPark er en applikation, som skal gøre det lettere at registere sine parkeringer</string>
     <string name="Om_Os_del2">SmartPark har base i Aarhus og har 4 ansatte. SmartPark blev grundlagt i start 2022</string>

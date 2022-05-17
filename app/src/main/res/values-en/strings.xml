@@ -5,7 +5,7 @@
     <string name="menu_indstillinger">Settings</string>
     <string name="Log_ind_knap">Login / Register</string>
     <string name="fab_find_parkering">Find Parking</string>
-    <string name="tilfoej_parkering_knap">Add Parking</string>
+    <string name="find_parkering_knap">Find Parking</string>
     <string name="slet_alle_parkeringer_knap">Delete all parkings</string>
     <string name="Om_Os_del1">SmartPark is an app, which  makes it easier to register your parkings</string>
     <string name="Om_Os_del2">SmartPark has their base in Aarhus and has 4 employees. SmartPark was founded in the start of 2022</string>
