@@ -1,5 +1,7 @@
 # AndroidAflevering
 
+Link til video: 
+
 #### Kort beskrivelse af applikationen: ####
 En parkerings applikation, hvor det er muligt at oprette sig og logge ind med sin egen Google-konto, en side hvor man kan søge på en addresse og åbne google maps derved. 
 Herudover er det muligt at ændre sproget på appen mellem dansk og engelsk. Derudover vil det være muligt at læse information om udbyderen.
@@ -19,7 +21,7 @@ Vi har valgt at lave en parkerings applikation, da den har mulighed for at indeh
 
 #### Test af applikation: ####
 
-Gennem hele udarbejdelsen af appen, har der været systematiske tests med 15 minutters intervaller, som skulle gøre det lettere for os at fejlfinde eventuelle problemer samt teste applikationens funktionalitet. Ydermere hjalp de systematiske test til at optimere kvaliteten af appen. 
+Gennem hele udarbejdelsen af appen, har der været systematiske tests med 15 minutters intervaller eller efter hver ændring i koden, som skulle gøre det lettere for os at fejlfinde eventuelle problemer samt teste applikationens funktionalitet. Ydermere hjalp de systematiske test til at optimere kvaliteten af appen. 
 
 #### Gennemgang af requirements: ####
     
