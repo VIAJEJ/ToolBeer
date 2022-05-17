@@ -1,7 +1,8 @@
 # AndroidAflevering
 
 #### Kort beskrivelse af applikationen: ####
-En parkerings applikation, hvor man kan oprette sig som bruger, sen en liste med parkeringsmuligheder, se timeprisen for parkeringsmuligheden, register sin parkering. Derudover skal det være muligt for brugeren at se en historik over sine parkeringer og finde information om udbyderen.
+En parkerings applikation, hvor det er muligt at oprette sig og logge ind med sin egen Google-konto, en side hvor man kan søge på en addresse og åbne google maps derved. 
+Herudover er det muligt at ændre sproget på appen mellem dansk og engelsk. Derudover vil det være muligt at læse information om udbyderen.
 
 #### Motivation for valg af app: ####
 Vi har valgt at lave en parkerings applikation, da den har mulighed for at indeholde en masse forskellige funktioner. Vi kiggede på de krav, som er stillet til vores app projekt. Ud fra det kom vi frem til, at en parkerings app ville kunne dække kravene for hvad appen skal indeholde. Derudover er det noget vi selv gør brug af, når vi er i besiddelse af en bil, og synes er dejlig nemt og tidsbesparende.
