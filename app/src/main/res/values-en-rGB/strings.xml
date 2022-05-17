@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">SmartPark</string>
     <string name="menu_om_smartpark">About SmartPark</string>
     <string name="menu_indstillinger">Settings</string>
-    <string name="Log_ind_knap">Login / Register with Google</string>
+    <string name="Log_ind_knap">Login / Register</string>
     <string name="fab_find_parkering">Find Parking</string>
     <string name="tilfoej_parkering_knap">Add Parking</string>
-    <string name="slet_alle_parkeringer_knap">Delete all parkerings</string>
-    <string name="Om_Os_del1">SmartPark is an app, which makes it easier to register your parkings</string>
-    <string name="Om_Os_del2">SmartPark has their base in Aarhus, has 4 employees and was founded in 2022</string>
+    <string name="slet_alle_parkeringer_knap">Delete all parkings</string>
+    <string name="Om_Os_del1">SmartPark is an app, which  makes it easier to register your parkings</string>
+    <string name="Om_Os_del2">SmartPark has their base in Aarhus and has 4 employees. SmartPark was founded in the start of 2022</string>
     <string name="om_os">About us</string>
     <string name="sign_out_knap">Log out</string>
-    <string name="menu_mine_parkeringer">My Parkerings</string>
-    <string name="vaelg_sprog">Choose Langauge</string>
-    <string name="dansk">Danish</string>
-    <string name="english">English</string>
-    <string name="smartpark_logo">SmartPark_Logo</string>
-    <string name="menu_start_parkering">Start Parkering</string>
-    <string name="logget_ud_toast">Signed Out</string>
+    <string name="menu_mine_parkeringer">My Parkings</string>
     <string name="dansk_flag">Danish flag</string>
     <string name="engelsk_flag">English flag</string>
 </resources>
