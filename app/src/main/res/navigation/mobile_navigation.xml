@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/nav_start_parkering"
-        android:name="com.androidaflevering.smartpark.ui.startparkering.StartParkeringFragment"
+        android:name="com.androidaflevering.smartpark.ui.findparkering.FindParkeringFragment"
         android:label="@string/find_parkering_knap"
-        tools:layout="@layout/fragment_start_parkering" />
+        tools:layout="@layout/fragment_find_parkering" />
 
     <fragment
         android:id="@+id/nav_mine_parkeringer"

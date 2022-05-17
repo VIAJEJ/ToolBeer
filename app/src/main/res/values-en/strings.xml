@@ -14,8 +14,8 @@
     <string name="dansk_flag">Danish flag</string>
     <string name="engelsk_flag">English flag</string>
     <string name="vaelg_sprog">Choose Language</string>
-    <string name="menu_find_parkering">Start Parking</string>
-    <string name="indtast_en_slutadresse_og_find_parkering">Write an address and find parkering nearby</string>
+    <string name="menu_find_parkering">Find Parking</string>
+    <string name="indtast_en_slutadresse_og_find_parkering">Write an address and find parkering nearby it</string>
     <string name="Singed_Out">Signed Out</string>
     <string name="floating_action_button">Floating Action Button</string>
 </resources>

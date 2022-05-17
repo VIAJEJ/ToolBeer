@@ -1,12 +1,9 @@
 package com.androidaflevering.smartpark.ui;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -14,8 +11,6 @@ import com.androidaflevering.smartpark.R;
 
 //MenuActivity
 
-import com.androidaflevering.smartpark.ui.startparkering.StartParkeringFragment;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -25,8 +20,6 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.androidaflevering.smartpark.databinding.ActivityMenuBinding;
-
-import java.util.prefs.Preferences;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,14 +1,14 @@
-package com.androidaflevering.smartpark.ui.startparkering;
+package com.androidaflevering.smartpark.ui.findparkering;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class StartParkeringViewModel extends ViewModel {
+public class FindParkeringViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public StartParkeringViewModel() {
+    public FindParkeringViewModel() {
         mText = new MutableLiveData<>();
     }
 

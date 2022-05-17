@@ -1,4 +1,4 @@
-package com.androidaflevering.smartpark.ui.startparkering;
+package com.androidaflevering.smartpark.ui.findparkering;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,24 +15,24 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.androidaflevering.smartpark.R;
-import com.androidaflevering.smartpark.databinding.FragmentStartParkeringBinding;
+import com.androidaflevering.smartpark.databinding.FragmentFindParkeringBinding;
 
-public class StartParkeringFragment extends Fragment {
+public class FindParkeringFragment extends Fragment {
 
     EditText editText;
 
-    private FragmentStartParkeringBinding binding;
+    private FragmentFindParkeringBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        StartParkeringViewModel startParkeringViewModel =
-                new ViewModelProvider(this).get(StartParkeringViewModel.class);
+        FindParkeringViewModel findParkeringViewModel =
+                new ViewModelProvider(this).get(FindParkeringViewModel.class);
 
-        binding = FragmentStartParkeringBinding.inflate(inflater, container, false);
+        binding = FragmentFindParkeringBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textFindParkering;
-        startParkeringViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        findParkeringViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
 
     }

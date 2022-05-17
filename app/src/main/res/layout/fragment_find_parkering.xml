@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.startparkering.StartParkeringFragment">
+    tools:context=".ui.findparkering.FindParkeringFragment">
 
    <TextView
        android:id="@+id/text_find_parkering"
