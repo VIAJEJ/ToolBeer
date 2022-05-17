@@ -18,6 +18,7 @@ Vi har valgt at lave en parkerings applikation, da den har mulighed for at indeh
 
 #### Test af applikation: ####
 
+Gennem hele udarbejdelsen af appen, har der været systematiske tests med 15 minutters intervaller, som skulle gøre det lettere for os at fejlfinde eventuelle problemer samt teste applikationens funktionalitet. Ydermere hjalp de systematiske test til at optimere kvaliteten af appen. 
 
 #### Gennemgang af requirements: ####
     
