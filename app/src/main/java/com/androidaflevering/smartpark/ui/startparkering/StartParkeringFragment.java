@@ -1,5 +1,7 @@
 package com.androidaflevering.smartpark.ui.startparkering;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +27,7 @@ public class StartParkeringFragment extends Fragment {
         binding = FragmentStartParkeringBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textStartParkering;
+        final TextView textView = binding.textFindParkering;
         startParkeringViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
 
