@@ -25,21 +25,8 @@
         app:layout_constraintBottom_toTopOf="@+id/imageButton_Danish"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
-
-    <ImageView
-        android:id="@+id/imageButton_Danish"
-        android:layout_width="100dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="587dp"
-        android:contentDescription="@string/dansk_flag"
-        android:src="@drawable/dansk_flag"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton_English"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vaelgSprog"></ImageView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.844"/>
 
     <ImageView
         android:id="@+id/imageButton_English"
@@ -47,38 +34,41 @@
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="53dp"
-        android:layout_marginBottom="564dp"
+        android:layout_marginBottom="520dp"
         android:contentDescription="@string/engelsk_flag"
         android:src="@drawable/engelsk_flag"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton_Danish"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_Danish"/>
+
+    <TextView
+        android:id="@+id/textViewCurrentLanguageValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginEnd="205dp"
+        android:layout_marginBottom="384dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vaelgSprog"
-        app:layout_constraintVertical_bias="1.0"></ImageView>
+        app:layout_constraintVertical_bias="0.645" />
 
-    <!--<RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/rg_language">
-
-    <RadioButton
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:id="@+id/rb_dansk"
-        android:text="@string/dansk"
-        android:padding="8dp"
-        android:checked="true"/>
-
-    <RadioButton
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:id="@+id/rb_english"
-        android:text="@string/english"
-        android:padding="8dp"/>
-
-</RadioGroup>-->
+    <ImageView
+        android:id="@+id/imageButton_Danish"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="540dp"
+        android:contentDescription="@string/dansk_flag"
+        android:src="@drawable/dansk_flag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_English"
+        app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

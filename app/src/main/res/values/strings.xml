@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">SmartPark</string>
-    <string name="title_activity_menu">MenuActivity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">SmartPark</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name" translatable="false">SmartPark</string>
+    <string name="title_activity_menu" translatable="false">MenuActivity</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">SmartPark</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings" translatable="false">Settings</string>
 
     <string name="menu_mine_parkeringer">Mine Parkeringer</string>
     <string name="menu_om_smartpark">Om SmartPark</string>
@@ -18,11 +18,11 @@
     <string name="Om_Os_del2">SmartPark har base i Aarhus og har 4 ansatte. SmartPark blev grundlagt i start 2022</string>
     <string name="om_os">Om os</string>
     <string name="sign_out_knap">Log ud</string>
-    <string name="smartpark">SmartPark</string>
+    <string name="smartpark" translatable="false">SmartPark</string>
     <string name="dansk_flag">Dansk flag</string>
     <string name="engelsk_flag">Engelsk flag</string>
-    <string name="vaelg_sprog">Vælg sprog</string>
+    <string name="vaelg_sprog">Vælg Sprog</string>
     <string name="menu_start_parkering">Start Parkering</string>
-    <string name="smartpark_logo">Logo</string>
+    <string name="smartpark_logo" translatable="false">Logo</string>
 
 </resources>

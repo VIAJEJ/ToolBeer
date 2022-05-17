@@ -30,7 +30,6 @@ public class MineParkeringerFragment extends Fragment {
         final TextView textView = binding.editText;
         mineParkeringerViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
-
     }
 
     @Override

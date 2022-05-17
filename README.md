@@ -13,3 +13,4 @@ Vi har valgt at lave en parkerings applikation, da den har mulighed for at indeh
 - [ ] 4. Jeg vil gerne kunne registrere en parkering
 - [ ] 5. Jeg vil gerne kunne se en liste med min historik over parkeringer
 - [ ] 6. Jeg vil gerne kunne finde information om udbyderen af appen
+    

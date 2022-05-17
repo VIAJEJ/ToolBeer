@@ -14,4 +14,6 @@
     <string name="menu_mine_parkeringer">My Parkings</string>
     <string name="dansk_flag">Danish flag</string>
     <string name="engelsk_flag">English flag</string>
+    <string name="vaelg_sprog">Choose Language</string>
+    <string name="menu_start_parkering">Start Parking</string>
 </resources>

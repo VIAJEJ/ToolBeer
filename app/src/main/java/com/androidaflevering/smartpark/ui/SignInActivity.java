@@ -14,6 +14,7 @@ import com.firebase.ui.auth.AuthUI;
 import com.androidaflevering.smartpark.R;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class SignInActivity extends AppCompatActivity {
@@ -48,9 +49,8 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     public void signIn(View v) {
-        List<AuthUI.IdpConfig> providers = Arrays.asList(
-//                new AuthUI.IdpConfig.EmailBuilder().build(),
-               new AuthUI.IdpConfig.GoogleBuilder().build());
+        List<AuthUI.IdpConfig> providers = Collections.singletonList(
+                new AuthUI.IdpConfig.GoogleBuilder().build());
 
         Intent signInIntent = AuthUI.getInstance()
                 .createSignInIntentBuilder()

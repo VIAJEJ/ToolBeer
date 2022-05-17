@@ -8,6 +8,8 @@ import androidx.lifecycle.LiveData;
 import com.google.firebase.auth.FirebaseUser;
 import com.androidaflevering.smartpark.data.UserRepository;
 
+import java.util.Objects;
+
 public class MainActivityViewModel extends AndroidViewModel {
     private final UserRepository userRepository;
 
@@ -18,13 +20,12 @@ public class MainActivityViewModel extends AndroidViewModel {
     }
 
     public void init() {
-        String userId = userRepository.getCurrentUser().getValue().getUid();
+        String userId = Objects.requireNonNull(userRepository.getCurrentUser().getValue()).getUid();
     }
 
     public LiveData<FirebaseUser> getCurrentUser(){
         return userRepository.getCurrentUser();
     }
-
 
 
     public void signOut() {

@@ -1,9 +1,12 @@
 package com.androidaflevering.smartpark.ui;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -23,6 +26,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.androidaflevering.smartpark.databinding.ActivityMenuBinding;
 
+import java.util.prefs.Preferences;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -31,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     //Menuactivity
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMenuBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +51,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMenu.toolbar);
-        binding.appBarMenu.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=Parkering nearby");
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                mapIntent.setPackage("com.google.android.apps.maps");
-                startActivity(mapIntent);
-            }
+        binding.appBarMenu.fab.setOnClickListener(view -> {
+            Uri gmmIntentUri = Uri.parse("geo:0,0?q=Parkering nearby");
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+            mapIntent.setPackage("com.google.android.apps.maps");
+            startActivity(mapIntent);
         });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
@@ -65,8 +68,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_menu);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
-
 
     }
 
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
     private void checkIfSignedIn() {
         viewModel.getCurrentUser().observe(this, user -> {
             if (user != null) {
-               //Toast her?
+                setContentView(binding.getRoot());
             } else
                 startLoginActivity();
         });
