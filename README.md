@@ -1,6 +1,7 @@
 # AndroidAflevering
 
 Link til video: 
+(note - Toast blev ikke vist i demonstrationen, men den er med i koden, og virker på andre emulatorer, grundet en emulator fejl)
 
 #### Kort beskrivelse af applikationen: ####
 En parkerings applikation, hvor det er muligt at oprette sig og logge ind med sin egen Google-konto, en side hvor man kan søge på en addresse og åbne google maps derved. 
@@ -30,7 +31,7 @@ Gennem hele udarbejdelsen af appen, har der været systematiske tests med 15 min
 - Her er der blevet benyttet firebase, hvortil der bliver gjort brug af firebase's egen login system, hvor der bruges networking så brugeren har muligheden for at logge ind med sin personlige Google-konto.   
   
 2. Jeg vil gerne kunne se en liste med SmartParks samarbejdspartnere
-- Her er der blevet brugt et recyclingView der gør det muligt at vise SmartPark's samarbejdspartnere. 
+- Her er der blevet brugt et recyclingView med scroll funktion, der gør det muligt at vise SmartPark's samarbejdspartnere. 
 
 3. Jeg vil gerne kunne ændre sprog
 - Her er der blevet oprettet en ny custom engelsk string fil, og så er det gjort muligt for brugeren at skifte mellem de to eksisterende string filer, alt efter hvilket sprog brugeren ønsker.
