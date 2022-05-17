@@ -27,19 +27,23 @@ Gennem hele udarbejdelsen af appen, har der været systematiske tests med 15 min
 - Her er der blevet benyttet firebase, hvortil der bliver gjort brug af firebase's egen login system, hvor der bruges networking så brugeren har muligheden for at logge ind med sin personlige Google-konto.   
   
 2. Jeg vil gerne kunne se en liste med SmartParks samarbejdspartnere
-
-4. Jeg vil gerne kunne ændre sprog
 - 
 
-6. Jeg vil gerne kunne se parkeringsmuligheder tæt på min lokation
+3. Jeg vil gerne kunne ændre sprog
+- Her er der blevet oprettet en ny custom engelsk string fil, og så er det gjort muligt for brugeren at skifte mellem de to eksisterende string filer, alt efter hvilket sprog brugeren ønsker.
 
-8. Jeg vil gerne kunne se en liste med min historik over parkeringer 
+4. Jeg vil gerne kunne se parkeringsmuligheder tæt på min lokation
+- Her er der blevet brugt en Expicit Intent som gør det muligt at åbne Google Maps og vise parkeringsmuligheder tæt på brugerens lokation. Denne funktionalitet er også tilkoblet en floating actionbar. 
 
-10. Jeg vil gerne kunne finde information om SmartPark
+5. Jeg vil gerne kunne se en liste med min historik over parkeringer 
+- 
+
+6. Jeg vil gerne kunne finde information om SmartPark
 - For at kunne se information om Smartpark er der gjort brug af strings som gør det muligt at skrive på mindre plads.
 
-10. Jeg vil gerne kunne kunne logge ud og evt. logge ind på en anden bruger
+7. Jeg vil gerne kunne kunne logge ud og evt. logge ind på en anden bruger
+- Her er der blevet brugt en SignOut metode, som sender brugeren tilbage til vores SignIn aktivitet. Når denne metode udføres, så vises der også en Toast, som siger "logget ud". 
 
+8. Jeg vil gerne kunne lukke appen og stadig være logget ind, når jeg åbner den igen.
+- Hertil er der benyttet firebase, hvortil der gøres brug af firebase's eget system, som gør det muligt for appen at gemme brugerens id.# AndroidAflevering
 
-12. Jeg vil gerne kunne lukke appen og stadig være logget ind, når jeg åbner den igen.
-- Hertil er der benyttet firebase, hvortil der gøres brug af firebase's eget system, som gør det muligt for appen at gemme brugerens id.
