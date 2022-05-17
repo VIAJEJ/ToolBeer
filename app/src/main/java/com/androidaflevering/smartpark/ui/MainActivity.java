@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     private MainActivityViewModel viewModel;
 
-    //Menuactivity
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMenuBinding binding;
 
@@ -40,19 +39,15 @@ public class MainActivity extends AppCompatActivity {
         checkIfSignedIn();
         setContentView(R.layout.signin_activity);
 
-        //Menuactivity
         binding = ActivityMenuBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMenu.toolbar);
-        binding.appBarMenu.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=Parkering nearby");
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                mapIntent.setPackage("com.google.android.apps.maps");
-                startActivity(mapIntent);
-            }
+        binding.appBarMenu.fab.setOnClickListener(view -> {
+            Uri gmmIntentUri = Uri.parse("geo:0,0?q=parkering nearby");
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+            mapIntent.setPackage("com.google.android.apps.maps");
+            startActivity(mapIntent);
         });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
@@ -68,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //Menuactivity
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_menu);
@@ -79,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     private void checkIfSignedIn() {
         viewModel.getCurrentUser().observe(this, user -> {
             if (user != null) {
-               //Toast her?
+
             } else
                 startLoginActivity();
         });
@@ -92,5 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void signOut(View v) {
         viewModel.signOut();
+        Toast.makeText(this, R.string.logget_ud_toast, Toast.LENGTH_SHORT).show();
     }
+
 }

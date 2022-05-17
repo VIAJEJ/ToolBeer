@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -27,6 +28,7 @@ public class StartParkeringFragment extends Fragment {
         final TextView textView = binding.textStartParkering;
         startParkeringViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
+
     }
 
     @Override
