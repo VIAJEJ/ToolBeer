@@ -1,7 +1,8 @@
 # AndroidAflevering
 
-Link til video: 
+Link til video: https://screenrec.com/share/1kLqvxZVh6
 (note - Toast blev ikke vist i demonstrationen, men den er med i koden, og virker på andre emulatorer, grundet en emulator fejl)
+
 
 #### Kort beskrivelse af applikationen: ####
 En parkerings applikation, hvor det er muligt at oprette sig og logge ind med sin egen Google-konto, en side hvor man kan søge på en addresse og åbne google maps derved. 
