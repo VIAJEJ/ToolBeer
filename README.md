@@ -24,8 +24,13 @@ Vi har valgt at lave en parkerings applikation, da den har mulighed for at indeh
 1. Jeg vil gerne kunne oprette og logge ind som bruger
 2. Jeg vil gerne kunne se en liste med SmartParks samarbejdspartnere
 3. Jeg vil gerne kunne ændre sprog
+
 4. Jeg vil gerne kunne se parkeringsmuligheder tæt på min lokation
+Her er der blevet brugt en Explicit intent, som gør det muligt at åbne Google Maps og vise parkeringsmuligheder i nærheden af brugeren. Denne funktionalitet er koblet op med en floating action button. 
+
 5. Jeg vil gerne kunne se en liste med min historik over parkeringer 
 6. Jeg vil gerne kunne finde information om SmartPark
 7. Jeg vil gerne kunne kunne logge ud og evt. logge ind på en anden bruger
+
+
 8. Jeg vil gerne kunne lukke appen og stadig være logget ind, når jeg åbner den igen.
