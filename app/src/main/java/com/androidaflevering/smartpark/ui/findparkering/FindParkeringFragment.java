@@ -40,9 +40,9 @@ public class FindParkeringFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        editText = (EditText) view.findViewById(R.id.samarbejdspartnereRecyclerView);
+        editText = view.findViewById(R.id.samarbejdspartnereRecyclerView);
 
-        Button button = (Button) view.findViewById(R.id.button);
+        Button button = view.findViewById(R.id.button);
         button.setOnClickListener(v -> {
             Uri gmmIntentUri = Uri.parse("geo:0,0?q=parkering near " + editText.getText());
             Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);

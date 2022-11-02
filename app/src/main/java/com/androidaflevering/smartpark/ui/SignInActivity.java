@@ -13,7 +13,6 @@ import androidx.lifecycle.ViewModelProvider;
 import com.firebase.ui.auth.AuthUI;
 import com.androidaflevering.smartpark.R;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 

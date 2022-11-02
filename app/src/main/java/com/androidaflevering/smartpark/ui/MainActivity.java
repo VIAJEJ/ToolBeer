@@ -9,8 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import com.androidaflevering.smartpark.R;
 
-//MenuActivity
-
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;

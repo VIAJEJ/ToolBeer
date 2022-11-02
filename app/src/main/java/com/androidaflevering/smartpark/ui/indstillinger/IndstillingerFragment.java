@@ -1,16 +1,11 @@
 package com.androidaflevering.smartpark.ui.indstillinger;
 
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,7 +17,6 @@ import com.androidaflevering.smartpark.R;
 import com.androidaflevering.smartpark.databinding.FragmentIndstillingerBinding;
 
 import java.util.Locale;
-import java.util.Objects;
 
 public class IndstillingerFragment extends Fragment implements View.OnClickListener {
 
