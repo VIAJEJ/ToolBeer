@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_find_forhandler"
-            android:icon="@drawable/parking_icon"
+            android:icon="@drawable/ic_baseline_menu_book_24"
             android:title="@string/menu_find_forhandler" />
         <item
             android:id="@+id/nav_forhandlere"
@@ -14,7 +14,7 @@
             android:title="@string/menu_forhandlere" />
         <item
             android:id="@+id/nav_om_ToolBeer"
-            android:icon="@drawable/ToolBeer_Hvid"
+            android:icon="@drawable/toolBeer_om_os"
             android:title="@string/menu_om_To_Øl" />
         <item
             android:id="@+id/nav_indstillinger"
