@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = binding.navView;
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_start_parkering, R.id.nav_mine_parkeringer, R.id.nav_om_smartpark, R.id.nav_indstillinger)
+                R.id.nav_find_forhandler, R.id.nav_forhandlere, R.id.nav_om_ToolBeer, R.id.nav_indstillinger)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_menu);

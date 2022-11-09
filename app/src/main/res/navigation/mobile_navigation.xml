@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_start_parkering">
+    app:startDestination="@+id/nav_find_forhandler">
 
     <fragment
-        android:id="@+id/nav_start_parkering"
+        android:id="@+id/nav_find_forhandler"
         android:name="com.SEP7.ToolBeer.ui.findparkering.FindParkeringFragment"
         android:label="@string/find_To_Øl_knap"
         tools:layout="@layout/fragment_find_parkering" />
 
     <fragment
-        android:id="@+id/nav_mine_parkeringer"
+        android:id="@+id/nav_forhandlere"
         android:name="com.SEP7.ToolBeer.ui.samarbejdspartnere.SamarbejdspartnereFragment"
         android:label="@string/menu_forhandlere"
         tools:layout="@layout/fragment_samarbejdspartnere" />
 
     <fragment
-        android:id="@+id/nav_om_smartpark"
+        android:id="@+id/nav_om_ToolBeer"
         android:name="com.SEP7.ToolBeer.ui.omsmartpark.OmOsFragment"
         android:label="@string/menu_om_To_Øl"
         tools:layout="@layout/fragment_om_os" />
