@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.omsmartpark.OmOsFragment"
+    tools:context="com.SEP7.ToolBeer.ui.omsmartpark.OmOsFragment"
     >
 
     <ImageView
@@ -13,21 +13,23 @@
         android:layout_height="169dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/company_logo_white"
+        android:src="@drawable/ToolBeer_Hvid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/smartpark_logo" />
+        android:contentDescription="@string/To_Øl_logo" />
 
     <TextView
         android:id="@+id/text_om_os"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="#000000"
+        android:fontFamily="sans-serif"
         android:text="@string/om_os"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

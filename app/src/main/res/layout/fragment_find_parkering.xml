@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.findparkering.FindParkeringFragment">
+    tools:context="com.SEP7.ToolBeer.ui.findparkering.FindParkeringFragment">
 
    <TextView
        android:id="@+id/text_find_parkering"
@@ -15,7 +15,7 @@
        android:layout_marginEnd="8dp"
        android:textAlignment="center"
        android:textSize="20sp"
-       android:text="@string/indtast_en_slutadresse_og_find_parkering"
+       android:text="@string/indtast_en_slutadresse_og_find_forhandler"
        android:textColor="@color/colorAccent"
        app:layout_constraintBottom_toTopOf="@+id/samarbejdspartnereRecyclerView"
        app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +53,7 @@
        android:layout_marginBottom="412dp"
        android:layout_weight="3"
        android:background="@color/colorPrimaryDark"
-       android:text="@string/find_parkering_knap"
+       android:text="@string/find_To_Øl_knap"
        android:textColor="@color/colorAccent"
        android:textStyle="bold"
        app:layout_constraintBottom_toBottomOf="parent"

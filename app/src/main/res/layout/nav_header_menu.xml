@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toStartOf="@+id/signOutButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/company_logo_white" />
+        app:srcCompat="@drawable/ToolBeer_Sort" />
 
     <TextView
         android:id="@+id/textView2"
@@ -32,14 +32,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nav_header_title"
+        android:text="@string/menu"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,10 +48,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
+        android:background="@color/colorAccent"
         android:onClick="signOut"
         android:text="@string/sign_out_knap"
-        android:background="@color/colorPrimaryDark"
-        android:textColorHighlight="#786C6C"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"

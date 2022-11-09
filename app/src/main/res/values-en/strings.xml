@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SmartPark</string>
-    <string name="menu_om_smartpark">About SmartPark</string>
+    <string name="nav_header_title">ToolBeer</string>
+    <string name="app_name">Tool Beer</string>
+    <string name="menu_om_To_Øl">About Tool Beer</string>
     <string name="menu_indstillinger">Settings</string>
     <string name="Log_ind_knap">Login / Register</string>
-    <string name="fab_find_parkering">Find Parking Near You</string>
-    <string name="find_parkering_knap">Find Parking</string>
-    <string name="Om_Os_del1">SmartPark is an app, which  makes it easier to register your parkings</string>
-    <string name="Om_Os_del2">SmartPark has their base in Aarhus and has 4 employees. SmartPark was founded in the start of 2022</string>
+    <string name="fab_find_To_Øl">Find Dealer Near You</string>
+    <string name="find_To_Øl_knap">Find Tool Beer</string>
+    <string name="Om_Os_del1">Starting out as a home brewing project back in 2005, To Øl was permanently established in 2010 working as a gypsy brewery lending in on other breweries spare capacity for the following decade.</string>
+    <string name="Om_Os_del2">In 2019 we took over a former food factory in the Western part of Zealand, Denmark, where we’re setting up a full-blown specially designed brewery and craft beverage hub. To Øl City is the name of the place.</string>
     <string name="om_os">About us</string>
     <string name="sign_out_knap">Log out</string>
-    <string name="menu_samarbejdspartnere">Partners</string>
+    <string name="menu_forhandlere">Partners</string>
     <string name="dansk_flag">Danish flag</string>
     <string name="engelsk_flag">English flag</string>
-    <string name="vaelg_sprog">Choose Language</string>
-    <string name="menu_find_parkering">Find Parking</string>
-    <string name="indtast_en_slutadresse_og_find_parkering">Write an address and find parkering nearby it</string>
+    <string name="vælg_sprog">Choose Language</string>
+    <string name="menu_find_forhandler">Find Dealer</string>
+    <string name="indtast_en_slutadresse_og_find_forhandler">Write an address and find parkering nearby it</string>
     <string name="Singed_Out">Signed Out</string>
     <string name="floating_action_button">Floating Action Button</string>
+    <string name="menu">Menu</string>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context="com.SEP7.ToolBeer.ui.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:text="@string/fab_find_parkering"
+        android:text="@string/fab_find_To_Øl"
         android:textSize="12sp"
         app:layout_anchor="@+id/fab"
         app:layout_anchorGravity="top|center" />

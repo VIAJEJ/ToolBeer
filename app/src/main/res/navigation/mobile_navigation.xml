@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/nav_start_parkering"
-        android:name="com.androidaflevering.smartpark.ui.findparkering.FindParkeringFragment"
-        android:label="@string/find_parkering_knap"
+        android:name="com.SEP7.ToolBeer.ui.findparkering.FindParkeringFragment"
+        android:label="@string/find_To_Øl_knap"
         tools:layout="@layout/fragment_find_parkering" />
 
     <fragment
         android:id="@+id/nav_mine_parkeringer"
-        android:name="com.androidaflevering.smartpark.ui.samarbejdspartnere.SamarbejdspartnereFragment"
-        android:label="@string/menu_samarbejdspartnere"
+        android:name="com.SEP7.ToolBeer.ui.samarbejdspartnere.SamarbejdspartnereFragment"
+        android:label="@string/menu_forhandlere"
         tools:layout="@layout/fragment_samarbejdspartnere" />
 
     <fragment
         android:id="@+id/nav_om_smartpark"
-        android:name="com.androidaflevering.smartpark.ui.omsmartpark.OmOsFragment"
-        android:label="@string/menu_om_smartpark"
+        android:name="com.SEP7.ToolBeer.ui.omsmartpark.OmOsFragment"
+        android:label="@string/menu_om_To_Øl"
         tools:layout="@layout/fragment_om_os" />
 
     <fragment
         android:id="@id/nav_indstillinger"
-        android:name="com.androidaflevering.smartpark.ui.indstillinger.IndstillingerFragment"
+        android:name="com.SEP7.ToolBeer.ui.indstillinger.IndstillingerFragment"
         android:label="@string/menu_indstillinger"
         tools:layout="@layout/fragment_indstillinger" />
 </navigation>

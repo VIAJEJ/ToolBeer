@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="com.androidaflevering.smartpark.ui.SignInActivity">
+    tools:context="com.SEP7.ToolBeer.ui.SignInActivity">
 
     <Button
         android:id="@+id/signInButton"
@@ -38,7 +38,7 @@
         android:layout_marginStart="123dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="124dp"
-        android:text="@string/smartpark"
+        android:text="@string/app_name"
         android:textColor="@color/colorAccent"
         android:textSize="34sp"
         android:textStyle="bold"
