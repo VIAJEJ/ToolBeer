@@ -9,12 +9,12 @@ import com.SEP7.ToolBeer.R;
 
 
 public class ViewHolder extends RecyclerView.ViewHolder {
-    public TextView samarbejdspartnerNavn;
+    public TextView forhandlerNavn;
     public View view;
 
     ViewHolder(View itemView) {
         super(itemView);
-        samarbejdspartnerNavn = itemView.findViewById(R.id.samarbejdsPartnere);
+        forhandlerNavn = itemView.findViewById(R.id.forhandlere);
         this.view = itemView;
     }
 }

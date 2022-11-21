@@ -3,23 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_find_forhandler">
+    app:startDestination="@+id/nav_produktkatalog">
 
     <fragment
-        android:id="@+id/nav_find_forhandler"
-        android:name="com.SEP7.ToolBeer.ui.findparkering.FindParkeringFragment"
-        android:label="@string/find_To_Øl_knap"
-        tools:layout="@layout/fragment_find_parkering" />
+        android:id="@+id/nav_produktkatalog"
+        android:name="com.SEP7.ToolBeer.ui.produktkatalog.ProduktkatalogFragment"
+        android:label="@string/menu_produktkatalog"
+        tools:layout="@layout/fragment_produktkatalog" />
+
+    <fragment
+        android:id="@+id/nav_favoritter"
+        android:name="com.SEP7.ToolBeer.ui.favoritter.FavoritterFragment"
+        android:label="@string/menu_favoritter"
+        tools:layout="@layout/fragment_favoritter" />
 
     <fragment
         android:id="@+id/nav_forhandlere"
-        android:name="com.SEP7.ToolBeer.ui.samarbejdspartnere.SamarbejdspartnereFragment"
+        android:name="com.SEP7.ToolBeer.ui.forhandlere.ForhandlereFragment"
         android:label="@string/menu_forhandlere"
-        tools:layout="@layout/fragment_samarbejdspartnere" />
+        tools:layout="@layout/fragment_forhandlere" />
+
+    <fragment
+        android:id="@+id/nav_find_forhandler"
+        android:name="com.SEP7.ToolBeer.ui.findForhandler.Find_Forhandler_Fragment"
+        android:label="@string/find_forhandler_knap"
+        tools:layout="@layout/fragment_find_forhandler" />
 
     <fragment
         android:id="@+id/nav_om_ToolBeer"
-        android:name="com.SEP7.ToolBeer.ui.omsmartpark.OmOsFragment"
+        android:name="com.SEP7.ToolBeer.ui.omToolBeer.OmOsFragment"
         android:label="@string/menu_om_To_Øl"
         tools:layout="@layout/fragment_om_os" />
 

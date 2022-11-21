@@ -1,14 +1,14 @@
-package com.SEP7.ToolBeer.ui.samarbejdspartnere;
+package com.SEP7.ToolBeer.ui.forhandlere;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SamarbejdspartnereViewModel extends ViewModel {
+public class ForhandlereViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public SamarbejdspartnereViewModel() {
+    public ForhandlereViewModel() {
         mText = new MutableLiveData<>();
     }
 

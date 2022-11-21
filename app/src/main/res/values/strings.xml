@@ -11,8 +11,8 @@
     <string name="menu_om_To_Øl">Om To Øl</string>
     <string name="menu_indstillinger">Indstillinger</string>
     <string name="Log_ind_knap">Log ind/registrere dig med Google</string>
-    <string name="fab_find_To_Øl">Find Forhandler tæt på dig</string>
-    <string name="find_To_Øl_knap">Find To Øl</string>
+    <string name="fab_shop">Webshop</string>
+    <string name="find_forhandler_knap">Find Forhandler</string>
     <string name="Om_Os_del1">To Øl startede som et hjemmebrygprojekt tilbage i 2005, og blev permanent etableret i 2010 og arbejdede som et sigøjnerbryggeri, der lånte ind på andre bryggeriers ledige kapacitet i det følgende årti.</string>
     <string name="Om_Os_del2">I 2019 overtog vi en tidligere fødevarefabrik i den vestlige del af Sjælland, Danmark, hvor vi etablerer et fuldt udviklet specialdesignet bryggeri og håndværksdrikkehub. Til Øl City hedder stedet.</string>
     <string name="om_os">Om os</string>
@@ -20,11 +20,19 @@
     <string name="dansk_flag">Dansk flag</string>
     <string name="engelsk_flag">Engelsk flag</string>
     <string name="vælg_sprog">Vælg Sprog</string>
-    <string name="menu_find_forhandler">Find Forhandler</string>
+    <string name="menu_produktkatalog">Produktkatalog</string>
     <string name="To_Øl_logo" translatable="false">Logo</string>
-    <string name="indtast_en_slutadresse_og_find_forhandler">Indtast en slutadresse og find forhandler tæt på</string>
+    <string name="indtast_en_adresse_og_find_forhandler">Indtast en adresse og find forhandler tæt på</string>
     <string name="Singed_Out">Logget Ud</string>
     <string name="floating_action_button">Floating Action Button</string>
     <string name="menu">Menu</string>
+    <string name="menu_favoritter">Favoritter</string>
+    <string name="find_forhandler">Find Forhandler</string>
+    <string name="kontakt">Kontakt</string>
+    <string name="adresse">Slotsgade 2, 1 sal.</string>
+    <string name="postnummer">2200 København</string>
+    <string name="land">Danmark</string>
+    <string name="e_mail">E-mail</string>
+    <string name="find_naermeste_forhandler">Find Nærmeste Forhandler</string>
 
 </resources>

@@ -5,16 +5,24 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_find_forhandler"
+            android:id="@+id/nav_produktkatalog"
             android:icon="@drawable/ic_baseline_menu_book_24"
-            android:title="@string/menu_find_forhandler" />
+            android:title="@string/menu_produktkatalog" />
+        <item
+            android:id="@+id/nav_favoritter"
+            android:icon="@drawable/ic_baseline_favorite_24"
+            android:title="@string/menu_favoritter" />
         <item
             android:id="@+id/nav_forhandlere"
             android:icon="@drawable/ic_baseline_list_24"
             android:title="@string/menu_forhandlere" />
         <item
+            android:id="@+id/nav_find_forhandler"
+            android:icon="@drawable/ic_baseline_location_on_24"
+            android:title="@string/find_forhandler" />
+        <item
             android:id="@+id/nav_om_ToolBeer"
-            android:icon="@drawable/toolBeer_om_os"
+            android:icon="@drawable/toolbeer_om_os"
             android:title="@string/menu_om_To_Øl" />
         <item
             android:id="@+id/nav_indstillinger"

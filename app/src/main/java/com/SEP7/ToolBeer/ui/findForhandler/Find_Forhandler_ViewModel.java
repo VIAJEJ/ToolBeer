@@ -1,14 +1,14 @@
-package com.SEP7.ToolBeer.ui.omsmartpark;
+package com.SEP7.ToolBeer.ui.findForhandler;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class OmOsViewModel extends ViewModel {
+public class Find_Forhandler_ViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public OmOsViewModel() {
+    public Find_Forhandler_ViewModel() {
         mText = new MutableLiveData<>();
     }
 

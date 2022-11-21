@@ -4,23 +4,21 @@ import java.util.ArrayList;
 
 public class Database {
 
-    private ArrayList<SamarbejdspartnereInfo> SamarbejdspartnereAListe = new ArrayList<>();
+    private ArrayList<ForhandlereInfo> ForhandlereAListe = new ArrayList<>();
     private static Database database;
 
     private Database() {
-        SamarbejdspartnereAListe.add(new SamarbejdspartnereInfo("Saling Parkeringshus","Østergade 25, 8000 Aarhus C", "00.00 - 24.00", 24.00));
-        SamarbejdspartnereAListe.add(new SamarbejdspartnereInfo("Bruuns Galleri Parkeringshus", "M.P. Bruunsgade 25, 8000 Aarhus C", "00.00-24.00", 22));
-        SamarbejdspartnereAListe.add(new SamarbejdspartnereInfo("Navitas Parkeringshus", "Inge Lehmanns Gade 10, 8000 Aarhus C", "00.00-24.00", 17));
-        SamarbejdspartnereAListe.add(new SamarbejdspartnereInfo("DGI Huset", "Værkmestergade 17, 8000 Aarhus C", "00.00-24.00", 20));
-        SamarbejdspartnereAListe.add(new SamarbejdspartnereInfo("ARoS Parkeringshus", "ARoS Allé, 8000 Aarhus C", "00.00-24.00", 17));
-        SamarbejdspartnereAListe.add(new SamarbejdspartnereInfo("Busgaden Parkeringshus", "Telefonsmøgen 1, 8000 Aarhus C", "00.00-24.00", 17));
-        SamarbejdspartnereAListe.add(new SamarbejdspartnereInfo("Dokk1", "Kystvejen", "00:00-23:59", 44));
-        SamarbejdspartnereAListe.add(new SamarbejdspartnereInfo("Havneholmen","Thit Jensens Gade","00:00-23:59", 44));
-        SamarbejdspartnereAListe.add(new SamarbejdspartnereInfo("Z-huset", "Bernhart-Jensens Boulevard", "00:00-23:59", 30));
-        SamarbejdspartnereAListe.add(new SamarbejdspartnereInfo("Nicolinehus", "Nicolinehus", "00:00-23:59", 22));
-        SamarbejdspartnereAListe.add(new SamarbejdspartnereInfo("Brynet", "Risskov brynet", "00:00-23:59", 22));
-        SamarbejdspartnereAListe.add(new SamarbejdspartnereInfo("Møllehatten", "Møllehatten", "00:00-23:59", 22));
-
+        ForhandlereAListe.add(new ForhandlereInfo("SuperBrugsen", "07:00 - 21:00", "www.superbrugsen.coop.dk/"));
+        ForhandlereAListe.add(new ForhandlereInfo("Kvickly", "07:00-21:00", "www.kvickly.coop.dk/"));
+        ForhandlereAListe.add(new ForhandlereInfo("Dagli’Brugsen", "07:00-21.00", "www.daglibrugsen.coop.dk"));
+        ForhandlereAListe.add(new ForhandlereInfo("Irma", "08:00-21:00", "www.irma.dk"));
+        ForhandlereAListe.add(new ForhandlereInfo("Coop 365discount", "08:00-22:00", "www.coop365.coop.dk"));
+        ForhandlereAListe.add(new ForhandlereInfo("Fakta", "07:00-21:00", "www.fakta.dk"));
+        ForhandlereAListe.add(new ForhandlereInfo("Bilka", "07:00-22:00", "www.bilka.dk"));
+        ForhandlereAListe.add(new ForhandlereInfo("Føtex","07:00-21:00", "www.føtex.dk"));
+        ForhandlereAListe.add(new ForhandlereInfo("Netto (Ikke alle)", "08:00-22:00", "www.netto.dk"));
+        ForhandlereAListe.add(new ForhandlereInfo("Salling", "10:00-18:00", "www.salling.dk"));
+        ForhandlereAListe.add(new ForhandlereInfo("Væskebalancen", "12:00-19:00", "www.facebook.com/vaeskebalancenaarhus"));
     }
 
     public static Database getInstance () {
@@ -30,8 +28,7 @@ public class Database {
         return database;
     }
 
-    public ArrayList<SamarbejdspartnereInfo> getSamarbejdspartnereAListe() {
-    return SamarbejdspartnereAListe;
+    public ArrayList<ForhandlereInfo> getForhandlereAListe() {
+        return ForhandlereAListe;
     }
-
 }

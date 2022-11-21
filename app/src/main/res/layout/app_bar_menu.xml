@@ -15,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/colorAccent"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -29,15 +29,19 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:backgroundTint="@color/colorPrimaryDark"
-        app:srcCompat="@drawable/parking_icon"
-        android:contentDescription="@string/floating_action_button" />
+        android:contentDescription="@string/floating_action_button"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        app:maxImageSize="45dp"
+        app:srcCompat="@drawable/toolbeer_sort_fab"
+        tools:ignore="RedundantDescriptionCheck" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:text="@string/fab_find_To_Øl"
+        android:text="@string/fab_shop"
+        android:textColor="@color/colorAccent"
         android:textSize="12sp"
         app:layout_anchor="@+id/fab"
         app:layout_anchorGravity="top|center" />

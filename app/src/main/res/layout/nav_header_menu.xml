@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toStartOf="@+id/signOutButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/ToolBeer_Sort" />
+        app:srcCompat="@drawable/toolbeer_sort_fab" />
 
     <TextView
         android:id="@+id/textView2"

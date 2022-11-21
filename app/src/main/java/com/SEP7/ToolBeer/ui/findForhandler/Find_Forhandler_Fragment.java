@@ -1,4 +1,4 @@
-package com.SEP7.ToolBeer.ui.findparkering;
+package com.SEP7.ToolBeer.ui.findForhandler;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,23 +15,24 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.SEP7.ToolBeer.R;
-import com.SEP7.ToolBeer.databinding.FragmentFindParkeringBinding;
-public class FindParkeringFragment extends Fragment {
+import com.SEP7.ToolBeer.databinding.FragmentFindForhandlerBinding;
+
+public class Find_Forhandler_Fragment extends Fragment {
 
     EditText editText;
 
-    private FragmentFindParkeringBinding binding;
+    private FragmentFindForhandlerBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        FindParkeringViewModel findParkeringViewModel =
-                new ViewModelProvider(this).get(FindParkeringViewModel.class);
+        Find_Forhandler_ViewModel findForhandlerViewModel =
+                new ViewModelProvider(this).get(Find_Forhandler_ViewModel.class);
 
-        binding = FragmentFindParkeringBinding.inflate(inflater, container, false);
+        binding = FragmentFindForhandlerBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textFindParkering;
-        findParkeringViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textFindForhandler;
+        findForhandlerViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
 
     }
@@ -39,15 +40,23 @@ public class FindParkeringFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        editText = view.findViewById(R.id.samarbejdspartnereRecyclerView);
+        editText = view.findViewById(R.id.forhandler);
 
         Button button = view.findViewById(R.id.button);
         button.setOnClickListener(v -> {
-            Uri gmmIntentUri = Uri.parse("geo:0,0?q=parkering near " + editText.getText());
+            Uri gmmIntentUri = Uri.parse("geo:0,0?q=Coop near " + editText.getText());
             Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
             mapIntent.setPackage("com.google.android.apps.maps");
             startActivity(mapIntent);
         });
+        Button button2 = view.findViewById(R.id.find_forhandler_lokation);
+        button2.setOnClickListener(v -> {
+            Uri gmmIntentUri = Uri.parse("geo:0,0?q=Coop nearby");
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+            mapIntent.setPackage("com.google.android.apps.maps");
+            startActivity(mapIntent);
+        });
+
     }
 
     @Override

@@ -4,7 +4,7 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 
 import com.SEP7.ToolBeer.primitivDatabase.Database;
-import com.SEP7.ToolBeer.primitivDatabase.SamarbejdspartnereInfo;
+import com.SEP7.ToolBeer.primitivDatabase.ForhandlereInfo;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -37,7 +37,7 @@ public class UserRepository {
                 .signOut(app.getApplicationContext());
     }
 
-    public ArrayList<SamarbejdspartnereInfo> getAList() {
-        return database.getSamarbejdspartnereAListe();
+    public ArrayList<ForhandlereInfo> getAList() {
+        return database.getForhandlereAListe();
     }
 }

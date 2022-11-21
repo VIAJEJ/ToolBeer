@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.SEP7.ToolBeer.ui.findparkering.FindParkeringFragment">
+    tools:context="com.SEP7.ToolBeer.ui.findForhandler.Find_Forhandler_Fragment">
 
    <TextView
-       android:id="@+id/text_find_parkering"
+       android:id="@+id/text_find_forhandler"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_marginStart="8dp"
@@ -15,16 +15,16 @@
        android:layout_marginEnd="8dp"
        android:textAlignment="center"
        android:textSize="20sp"
-       android:text="@string/indtast_en_slutadresse_og_find_forhandler"
+       android:text="@string/indtast_en_adresse_og_find_forhandler"
        android:textColor="@color/colorAccent"
-       app:layout_constraintBottom_toTopOf="@+id/samarbejdspartnereRecyclerView"
+       app:layout_constraintBottom_toTopOf="@+id/forhandler"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintHorizontal_bias="1.0"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent" />
 
    <EditText
-       android:id="@+id/samarbejdspartnereRecyclerView"
+       android:id="@+id/forhandler"
        android:layout_width="0dp"
        android:layout_height="wrap_content"
        android:layout_marginStart="16dp"
@@ -32,6 +32,8 @@
        android:layout_marginEnd="16dp"
        android:layout_marginBottom="32dp"
        android:layout_weight="7"
+       android:autofillHints=""
+       android:inputType="textPostalAddress"
        android:minHeight="48dp"
        android:textColor="@color/colorAccent"
        android:visibility="visible"
@@ -39,10 +41,8 @@
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintHorizontal_bias="0.0"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/text_find_parkering"
-       tools:ignore="LabelFor,TouchTargetSizeCheck"
-       android:inputType="textPostalAddress"
-       android:autofillHints="" />
+       app:layout_constraintTop_toBottomOf="@+id/text_find_forhandler"
+       tools:ignore="LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
    <Button
        android:id="@+id/button"
@@ -52,13 +52,30 @@
        android:layout_marginEnd="143dp"
        android:layout_marginBottom="412dp"
        android:layout_weight="3"
-       android:background="@color/colorPrimaryDark"
-       android:text="@string/find_To_Øl_knap"
-       android:textColor="@color/colorAccent"
+       android:background="@color/colorAccent"
+       android:text="@string/find_forhandler_knap"
+       android:textColor="@color/colorPrimary"
        android:textStyle="bold"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/samarbejdspartnereRecyclerView" />
+       app:layout_constraintTop_toBottomOf="@+id/forhandler" />
+
+   <Button
+       android:id="@+id/find_forhandler_lokation"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="163dp"
+       android:layout_marginTop="200dp"
+       android:layout_marginEnd="160dp"
+       android:layout_marginBottom="189dp"
+       android:background="@color/colorAccent"
+       android:textColor="@color/colorPrimary"
+       android:textStyle="bold"
+       android:text="@string/find_naermeste_forhandler"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

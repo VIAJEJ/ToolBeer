@@ -9,17 +9,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.SEP7.ToolBeer.R;
 import com.SEP7.ToolBeer.data.UserRepository;
-import com.SEP7.ToolBeer.primitivDatabase.SamarbejdspartnereInfo;
+import com.SEP7.ToolBeer.primitivDatabase.ForhandlereInfo;
 
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     private View view;
-    private ArrayList<SamarbejdspartnereInfo> samarbejdsPartnereList = new ArrayList<>();
+    private ArrayList<ForhandlereInfo> forhandlereList = new ArrayList<>();
 
     public RecyclerViewAdapter(View view) {
-    samarbejdsPartnereList = UserRepository.getInstance(null).getAList();
+    forhandlereList = UserRepository.getInstance(null).getAList();
     this.view = view;
     }
 
@@ -33,13 +33,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.samarbejdspartnerNavn.setText(samarbejdsPartnereList.get(position).getSamarbejdspartnerNavn() + ", "
-                + samarbejdsPartnereList.get(position).getAdresse()
-                + ", " + samarbejdsPartnereList.get(position).getAabningstider() + ", " + samarbejdsPartnereList.get(position).getTimePris() + " kr.");
+        holder.forhandlerNavn.setText(forhandlereList.get(position).getForhandlerNavn() + ", "
+                //forhandlereList.get(position).getAdresse() + ", "
+                 + forhandlereList.get(position).getAabningstider() + ", " + forhandlereList.get(position).getWebsite());
     }
 
     @Override
     public int getItemCount() {
-        return samarbejdsPartnereList.size();
+        return forhandlereList.size();
     }
 }

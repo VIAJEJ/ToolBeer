@@ -1,11 +1,14 @@
 package com.SEP7.ToolBeer.ui.indstillinger;
 
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,7 +42,6 @@ public class IndstillingerFragment extends Fragment implements View.OnClickListe
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         if (veryFirstCreation) {
             veryFirstCreation = false;
             Locale locale;
@@ -70,17 +72,25 @@ public class IndstillingerFragment extends Fragment implements View.OnClickListe
         super.onViewCreated(view, savedInstanceState);
         binding.imageButtonDanish.setOnClickListener(this);
         binding.imageButtonEnglish.setOnClickListener(this);
+        binding.Email.setOnClickListener(this);
 
         if (currentLanguageOfTheApp.equals(LANGUAGE_DANISH)) {
             binding.textViewCurrentLanguageValue.setText(LANGUAGE_DANISH);
             binding.imageButtonDanish.setAlpha(0.5f);
             binding.imageButtonEnglish.setAlpha(1.0f);
         }
-        if (currentLanguageOfTheApp.equals(LANGUAGE_ENGLISH)){
+        if (currentLanguageOfTheApp.equals(LANGUAGE_ENGLISH)) {
             binding.imageButtonDanish.setAlpha(1.0f);
             binding.imageButtonEnglish.setAlpha(0.5f);
             binding.textViewCurrentLanguageValue.setText(LANGUAGE_ENGLISH);
         }
+
+        Button button = view.findViewById(R.id.Email);
+        button.setOnClickListener(v -> {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:info@toolbeer.dk"));
+        startActivity(intent);
+        });
     }
 
     public void onDestroyView() {
@@ -117,9 +127,10 @@ public class IndstillingerFragment extends Fragment implements View.OnClickListe
             Locale.setDefault(locale);
             config.setLocale(locale);
             requireActivity().recreate();
-
             requireActivity().getBaseContext().getResources().updateConfiguration(config, requireActivity().getBaseContext().getResources().getDisplayMetrics());
         }
     }
-}
+
+
+    }
 

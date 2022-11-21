@@ -36,14 +36,19 @@
         <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/drawable/parking_icon.xml" value="0.2895" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/drawable/side_nav_bar.xml" value="0.2895" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/activity_menu.xml" value="0.2869791666666667" />
-        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/app_bar_menu.xml" value="0.28541666666666665" />
-        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/content_menu.xml" value="0.28541666666666665" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/app_bar_menu.xml" value="0.25" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/content_menu.xml" value="0.24025974025974026" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/fragment_favoritter.xml" value="0.26510416666666664" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/fragment_find_forhandler.xml" value="0.25" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/fragment_find_parkering.xml" value="0.28541666666666665" />
-        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/fragment_indstillinger.xml" value="0.28541666666666665" />
-        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/fragment_om_os.xml" value="0.28541666666666665" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/fragment_forhandlere.xml" value="0.23232323232323232" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/fragment_indstillinger.xml" value="0.25" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/fragment_om_os.xml" value="0.22" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/fragment_produktkatalog.xml" value="0.23232323232323232" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/fragment_samarbejdspartnere.xml" value="0.28541666666666665" />
-        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/nav_header_menu.xml" value="0.28541666666666665" />
-        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/signin_activity.xml" value="0.2869791666666667" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/nav_header_menu.xml" value="0.25" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/recycler_view.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/layout/signin_activity.xml" value="0.1" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/ToolBeer/app/src/main/res/menu/activity_main_drawer.xml" value="0.28541666666666665" />
         <entry key="app/src/main/res/layout/app_bar_menu.xml" value="0.27589743589743587" />
         <entry key="app/src/main/res/layout/fragment_indstillinger.xml" value="0.2814814814814815" />

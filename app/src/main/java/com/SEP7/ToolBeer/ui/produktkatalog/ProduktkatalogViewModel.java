@@ -1,14 +1,14 @@
-package com.SEP7.ToolBeer.ui.findparkering;
+package com.SEP7.ToolBeer.ui.produktkatalog;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class FindParkeringViewModel extends ViewModel {
+public class ProduktkatalogViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public FindParkeringViewModel() {
+    public ProduktkatalogViewModel() {
         mText = new MutableLiveData<>();
     }
 
@@ -16,3 +16,4 @@ public class FindParkeringViewModel extends ViewModel {
         return mText;
     }
 }
+

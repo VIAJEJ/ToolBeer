@@ -1,4 +1,4 @@
-package com.SEP7.ToolBeer.ui.samarbejdspartnere;
+package com.SEP7.ToolBeer.ui.forhandlere;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,22 +13,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.SEP7.ToolBeer.R;
 import com.SEP7.ToolBeer.adapter.RecyclerViewAdapter;
-import com.SEP7.ToolBeer.databinding.FragmentSamarbejdspartnereBinding;
+import com.SEP7.ToolBeer.databinding.FragmentForhandlereBinding;
 
-public class SamarbejdspartnereFragment extends Fragment {
 
-    private FragmentSamarbejdspartnereBinding binding;
+public class ForhandlereFragment extends Fragment {
+
+    private FragmentForhandlereBinding binding;
     private RecyclerView recyclerView;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SamarbejdspartnereViewModel samarbejdspartnereViewModel =
-             new ViewModelProvider(this).get(SamarbejdspartnereViewModel.class);
+        ForhandlereViewModel forhandlereViewModel =
+             new ViewModelProvider(this).get(ForhandlereViewModel.class);
 
-        binding = FragmentSamarbejdspartnereBinding.inflate(inflater, container, false);
+        binding = FragmentForhandlereBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        recyclerView = root.findViewById(R.id.samarbejdspartnereRecyclerView);
+        recyclerView = root.findViewById(R.id.forhandler);
         recyclerView.hasFixedSize();
         recyclerView.setLayoutManager(new LinearLayoutManager(root.getContext()));
         recyclerView.setAdapter(new RecyclerViewAdapter(root));

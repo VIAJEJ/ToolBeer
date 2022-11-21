@@ -1,4 +1,4 @@
-package com.SEP7.ToolBeer.ui.omsmartpark;
+package com.SEP7.ToolBeer.ui.omToolBeer;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
