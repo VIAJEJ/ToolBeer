@@ -3,8 +3,8 @@ package com.SEP7.ToolBeer.data;
 import android.app.Application;
 import androidx.lifecycle.LiveData;
 
-import com.SEP7.ToolBeer.primitivDatabase.Database;
-import com.SEP7.ToolBeer.primitivDatabase.ForhandlereInfo;
+import com.SEP7.ToolBeer.localDatabase.Database;
+import com.SEP7.ToolBeer.localDatabase.ForhandlereInfo;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseUser;
 

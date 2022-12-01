@@ -1,4 +1,4 @@
-package com.SEP7.ToolBeer.primitivDatabase;
+package com.SEP7.ToolBeer.localDatabase;
 
 import java.util.ArrayList;
 

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.SEP7.ToolBeer.R;
 import com.SEP7.ToolBeer.data.UserRepository;
-import com.SEP7.ToolBeer.primitivDatabase.ForhandlereInfo;
+import com.SEP7.ToolBeer.localDatabase.ForhandlereInfo;
 
 import java.util.ArrayList;
 
