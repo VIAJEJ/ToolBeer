@@ -29,6 +29,14 @@ public class Users {
         this.country = country;
     }
 
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
+
     public String getName() {
         return name;
     }

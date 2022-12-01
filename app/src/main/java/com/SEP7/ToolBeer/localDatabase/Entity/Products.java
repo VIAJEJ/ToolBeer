@@ -10,7 +10,7 @@ public class Products {
 
     @PrimaryKey(autoGenerate = true) private int ProtID;
 
-    @ColumnInfo(name= "PName") private String pName;
+    @ColumnInfo(name= "ProdName") private String prodName;
 
     @ColumnInfo(name = "AlcoholP")
     private String alcoholP;
@@ -21,19 +21,27 @@ public class Products {
     @ColumnInfo(name = "Description")
     private String description;
 
-    public Products(String pName, String alcoholP, String type, String description) {
-        this.pName =pName;
+    public Products(String prodName, String alcoholP, String type, String description) {
+        this.prodName =prodName;
         this.alcoholP =alcoholP;
         this.type = type;
         this.description = description;
     }
 
-    public String getpName() {
-        return pName;
+    public int getProtID() {
+        return ProtID;
     }
 
-    public void setpName(String pName) {
-        this.pName = pName;
+    public void setProtID(int protID) {
+        ProtID = protID;
+    }
+
+    public String getProdName() {
+        return prodName;
+    }
+
+    public void setProdName(String pName) {
+        this.prodName = pName;
     }
 
     public String getAlcoholP() {

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Database {
 
-    private ArrayList<ForhandlereInfo> ForhandlereAListe = new ArrayList<>();
+    private final ArrayList<ForhandlereInfo> ForhandlereAListe = new ArrayList<>();
     private static Database database;
 
     private Database() {

@@ -3,13 +3,12 @@ package com.SEP7.ToolBeer.localDatabase.Entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(primaryKeys={"protID","userID"})
 public class Favorits {
 
-    @PrimaryKey
+
     private int protID;
 
-    @PrimaryKey
     private int userID;
 
     public Favorits(int protID, int userID) {

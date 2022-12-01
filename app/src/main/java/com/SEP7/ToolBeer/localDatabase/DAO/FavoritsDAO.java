@@ -3,20 +3,14 @@ package com.SEP7.ToolBeer.localDatabase.DAO;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
-import androidx.room.Update;
 
-import com.SEP7.ToolBeer.localDatabase.Entity.Products;
-
+import com.SEP7.ToolBeer.localDatabase.Entity.Favorits;
 
 @Dao
-public interface ProductsDao {
+public interface FavoritsDAO
+{
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insert(Products produkt);
-
-    @Update
-    void update(Products produkt);
-
-
+    void insert(Favorits favorit);
 
 }

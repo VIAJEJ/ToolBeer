@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-    private View view;
+    private final View view;
     private ArrayList<ForhandlereInfo> forhandlereList = new ArrayList<>();
 
     public RecyclerViewAdapter(View view) {
