@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(tableName = "Distributors_table")
 public class Distributors {
 
     @PrimaryKey(autoGenerate = true)

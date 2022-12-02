@@ -1,5 +1,6 @@
 package com.SEP7.ToolBeer.localDatabase.Entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -7,8 +8,9 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "Users_table")
 public class Users {
 
-    @PrimaryKey(autoGenerate = true)
-    private int userID;
+    @NonNull
+    @PrimaryKey
+    private String userID;
 
     @ColumnInfo(name = "Name")
     private String name;
@@ -29,11 +31,11 @@ public class Users {
         this.country = country;
     }
 
-    public int getUserID() {
+    public String getUserID() {
         return userID;
     }
 
-    public void setUserID(int userID) {
+    public void setUserID(String userID) {
         this.userID = userID;
     }
 

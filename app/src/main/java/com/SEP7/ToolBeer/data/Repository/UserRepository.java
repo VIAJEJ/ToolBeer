@@ -1,8 +1,9 @@
-package com.SEP7.ToolBeer.data;
+package com.SEP7.ToolBeer.data.Repository;
 
 import android.app.Application;
 import androidx.lifecycle.LiveData;
 
+import com.SEP7.ToolBeer.data.UserLiveData;
 import com.SEP7.ToolBeer.localDatabase.Database;
 import com.SEP7.ToolBeer.localDatabase.ForhandlereInfo;
 import com.firebase.ui.auth.AuthUI;

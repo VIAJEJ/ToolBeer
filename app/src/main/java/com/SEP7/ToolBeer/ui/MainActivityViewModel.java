@@ -5,7 +5,7 @@ import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.SEP7.ToolBeer.data.UserRepository;
+import com.SEP7.ToolBeer.data.Repository.UserRepository;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Objects;

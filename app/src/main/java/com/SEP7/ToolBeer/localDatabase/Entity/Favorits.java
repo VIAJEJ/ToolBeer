@@ -1,5 +1,6 @@
 package com.SEP7.ToolBeer.localDatabase.Entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -9,9 +10,10 @@ public class Favorits {
 
     private int protID;
 
-    private int userID;
+    @NonNull
+    private String userID;
 
-    public Favorits(int protID, int userID) {
+    public Favorits(int protID, String userID) {
         this.protID = protID;
         this.userID = userID;
     }
@@ -24,11 +26,11 @@ public class Favorits {
         this.protID = protID;
     }
 
-    public int getUserID() {
+    public String getUserID() {
         return userID;
     }
 
-    public void setUserID(int userID) {
+    public void setUserID(String userID) {
         this.userID = userID;
     }
 
