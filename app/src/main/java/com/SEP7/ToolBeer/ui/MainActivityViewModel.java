@@ -10,13 +10,11 @@ import com.SEP7.ToolBeer.data.Repository.UserRepository;
 import com.SEP7.ToolBeer.localDatabase.DAO.IRSetup;
 import com.google.firebase.auth.FirebaseUser;
 
-import java.util.Objects;
-
 public class MainActivityViewModel extends AndroidViewModel {
     private final UserRepository userRepository;
-    private IRSetup repository;
+    private final IRSetup repository;
 
-    public MainActivityViewModel(Application app){
+    public MainActivityViewModel(Application app) {
         super(app);
         userRepository = UserRepository.getInstance(app);
 

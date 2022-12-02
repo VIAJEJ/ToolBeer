@@ -4,8 +4,8 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 
 import com.SEP7.ToolBeer.data.UserLiveData;
-import com.SEP7.ToolBeer.localDatabase.Database;
-import com.SEP7.ToolBeer.localDatabase.ForhandlereInfo;
+import com.SEP7.ToolBeer.localDatabase.Entity.Distributors;
+import com.SEP7.ToolBeer.localDatabase.Seed;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -15,12 +15,10 @@ public class UserRepository {
     private final UserLiveData currentUser;
     private final Application app;
     private static UserRepository instance;
-    private static Database database;
 
     private UserRepository(Application app) {
         this.app = app;
         currentUser = new UserLiveData();
-        database = Database.getInstance();
     }
 
     public static synchronized UserRepository getInstance(Application app) {
@@ -43,9 +41,5 @@ public class UserRepository {
     public void signOut() {
         AuthUI.getInstance()
                 .signOut(app.getApplicationContext());
-    }
-
-    public ArrayList<ForhandlereInfo> getAList() {
-        return database.getForhandlereAListe();
     }
 }

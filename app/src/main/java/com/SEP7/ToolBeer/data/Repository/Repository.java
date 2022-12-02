@@ -3,6 +3,7 @@ package com.SEP7.ToolBeer.data.Repository;
 import android.app.Application;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
 import androidx.core.os.HandlerCompat;
 
@@ -16,12 +17,18 @@ import com.SEP7.ToolBeer.localDatabase.DAO.FavoritsDAO;
 import com.SEP7.ToolBeer.localDatabase.DAO.IRSetup;
 import com.SEP7.ToolBeer.localDatabase.DAO.ProductsDAO;
 import com.SEP7.ToolBeer.localDatabase.DAO.UsersDAO;
+import com.SEP7.ToolBeer.localDatabase.DistributorsDatabase;
 import com.SEP7.ToolBeer.localDatabase.Entity.Distributors;
 import com.SEP7.ToolBeer.localDatabase.Entity.Favorits;
 import com.SEP7.ToolBeer.localDatabase.Entity.Products;
 import com.SEP7.ToolBeer.localDatabase.Entity.Users;
+import com.SEP7.ToolBeer.localDatabase.FavoritsDatabase;
 import com.SEP7.ToolBeer.localDatabase.ProductsDatabase;
+import com.SEP7.ToolBeer.localDatabase.Seed;
+import com.SEP7.ToolBeer.localDatabase.UsersDatabase;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
 import java.util.ArrayList;
@@ -47,21 +54,25 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
     private List<Products> favoritslist;
 
     private UserRepository userRepository;
+    private final Seed seed;
     private Users activuser;
 
     private Repository(Application app) {
         Executors.newFixedThreadPool(4);
         mainThreadHandler = HandlerCompat.createAsync(Looper.getMainLooper());
         productsDAO = ProductsDatabase.getInstance(app).productsDao();
-        distributorsDAO = null;
-        favoritsDAO = null;
-        usersDAO = null;
+        distributorsDAO = DistributorsDatabase.getInstance(app).distributorsDAO();
+        favoritsDAO = FavoritsDatabase.getInstance(app).favoritsDAO();
+        usersDAO = UsersDatabase.getInstance(app).usersDao();
+        seed = Seed.getInstance();
     }
 
     @Override
     public void setActivUser() {
         userRepository = UserRepository.getInstance();
-        activuser.setUserID(userRepository.getCurrentUser().getValue().getUid());
+        executerservice.execute(()-> {
+            activuser.setUserID(userRepository.getCurrentUser().getValue().getUid());
+        });
     }
 
     public static Repository getInstance(Application app) {
@@ -96,11 +107,16 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
     }
 
     @Override
-    public void getDistributors() {
+    public void collectDistributors() {
         executerservice.execute(() -> {
             List<Distributors> ds = distributorsDAO.getAllDistributors();
             mainThreadHandler.post(() ->callbackDistributors(ds));
         });
+    }
+
+    @Override
+    public ArrayList<Distributors> getDistributors() {
+        return null;
     }
 
     @Override
@@ -126,5 +142,24 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
         executerservice.execute(() -> {
            favoritsDAO.addFavorit(prodID, activuser.getUserID());
         });
+    }
+
+
+    public void addPropertyChangeListener(String name, PropertyChangeListener listener) {
+        propertychangesupport.addPropertyChangeListener(name, listener);
+        switch (name) {
+            case "eventProducts":
+                listener.propertyChange(new PropertyChangeEvent(this, "eventProducts",null,productslist));
+                break;
+            case "eventFavorits":
+                listener.propertyChange(new PropertyChangeEvent(this, "eventFavorits",null,favoritslist));
+                break;
+            case "eventDistributors":
+                listener.propertyChange(new PropertyChangeEvent(this, "eventDistributors",null,distributorslist));
+                break;
+            default:
+                Log.d("call", "Der var en fejl i propertychangelistner");
+                break;
+        }
     }
 }

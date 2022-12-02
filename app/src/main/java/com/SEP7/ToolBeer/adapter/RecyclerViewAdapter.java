@@ -8,20 +8,34 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.SEP7.ToolBeer.R;
-import com.SEP7.ToolBeer.data.Repository.UserRepository;
-import com.SEP7.ToolBeer.localDatabase.ForhandlereInfo;
+import com.SEP7.ToolBeer.data.Repository.RInterfaces.IRDistributors;
+import com.SEP7.ToolBeer.data.Repository.Repository;
+import com.SEP7.ToolBeer.localDatabase.Entity.Distributors;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeSupport;
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     private final View view;
-    private ArrayList<ForhandlereInfo> forhandlereList = new ArrayList<>();
+    private ArrayList<Distributors> forhandlereList = new ArrayList<>();
+    private final IRDistributors repository;
+    private final PropertyChangeSupport propertyChangeSupport;
 
     public RecyclerViewAdapter(View view) {
-    forhandlereList = UserRepository.getInstance(null).getAList();
-    this.view = view;
+        repository = Repository.getInstance(null); //dette kan give problemer hvis det her er foeste gang den instancieres, dette skal lige foelges op paa
+        repository.collectDistributors();
+        this.view = view;
+
+        propertyChangeSupport = new PropertyChangeSupport(this);
+        repository.addPropertyChangeListener("eventDistributors", (PropertyChangeEvent evt) -> this.getDistriputors());
     }
+
+    public void getDistriputors() {
+        forhandlereList = repository.getDistributors();
+    }
+
 
     @NonNull
     @Override
@@ -33,9 +47,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.forhandlerNavn.setText(forhandlereList.get(position).getForhandlerNavn() + ", "
+        holder.forhandlerNavn.setText(forhandlereList.get(position).getName() + ", "
                 //forhandlereList.get(position).getAdresse() + ", "
-                 + forhandlereList.get(position).getAabningstider() + ", " + forhandlereList.get(position).getWebsite());
+                + forhandlereList.get(position).getOpeningHours() + ", " + forhandlereList.get(position).getWebsite());
     }
 
     @Override
