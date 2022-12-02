@@ -8,14 +8,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class UserLiveData extends LiveData<FirebaseUser> {
     private final FirebaseAuth.AuthStateListener listener = firebaseAuth -> setValue(firebaseAuth.getCurrentUser());
-    private UserLiveData instance
-
-
-    @Nullable
-    @Override
-    public FirebaseUser getValue() {
-        return super.getValue();
-    }
 
     @Override
     protected void onActive() {

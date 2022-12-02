@@ -29,6 +29,13 @@ public class UserRepository {
         return instance;
     }
 
+    public static synchronized UserRepository getInstance() {
+        if(instance != null) {
+            return instance;
+        }
+        return null;
+    }
+
     public LiveData<FirebaseUser> getCurrentUser() {
         return currentUser;
     }

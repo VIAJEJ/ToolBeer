@@ -43,13 +43,15 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
     private List<Distributors> distributorslist;
     private List<Products> favoritslist;
 
+    private UserRepository userRepository;
     private Users activuser;
 
     private Repository() {
         Executors.newFixedThreadPool(4);
         mainThreadHandler = HandlerCompat.createAsync(Looper.getMainLooper());
         HttpCookie userLiveData;
-        activuser.setUserID(userLiveData.getValue().getUid());
+        userRepository = userRepository.getInstance();
+        activuser.setUserID(userRepository.getCurrentUser().getValue().getUid());
     }
 
     public Repository getinstance() {
