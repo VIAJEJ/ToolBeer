@@ -21,5 +21,5 @@ public interface ProductsDAO {
     void update(Products produkt);
 
     @Query("Select * from produkter_table")
-    public List<Products> getAllProducts();
+    List<Products> getAllProducts();
 }

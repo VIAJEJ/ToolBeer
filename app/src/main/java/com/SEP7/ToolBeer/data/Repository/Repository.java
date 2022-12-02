@@ -1,5 +1,6 @@
 package com.SEP7.ToolBeer.data.Repository;
 
+import android.app.Application;
 import android.os.Handler;
 import android.os.Looper;
 
@@ -9,34 +10,36 @@ import com.SEP7.ToolBeer.data.Repository.RInterfaces.IRDistributors;
 import com.SEP7.ToolBeer.data.Repository.RInterfaces.IRFavorits;
 import com.SEP7.ToolBeer.data.Repository.RInterfaces.IRProducts;
 import com.SEP7.ToolBeer.data.Repository.RInterfaces.IRUsers;
-import com.SEP7.ToolBeer.data.UserLiveData;
+
 import com.SEP7.ToolBeer.localDatabase.DAO.DistributorsDAO;
 import com.SEP7.ToolBeer.localDatabase.DAO.FavoritsDAO;
+import com.SEP7.ToolBeer.localDatabase.DAO.IRSetup;
 import com.SEP7.ToolBeer.localDatabase.DAO.ProductsDAO;
 import com.SEP7.ToolBeer.localDatabase.DAO.UsersDAO;
 import com.SEP7.ToolBeer.localDatabase.Entity.Distributors;
 import com.SEP7.ToolBeer.localDatabase.Entity.Favorits;
 import com.SEP7.ToolBeer.localDatabase.Entity.Products;
 import com.SEP7.ToolBeer.localDatabase.Entity.Users;
+import com.SEP7.ToolBeer.localDatabase.ProductsDatabase;
 
 import java.beans.PropertyChangeSupport;
-import java.net.HttpCookie;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributors {
+public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributors, IRSetup {
 
-    private ProductsDAO productsDAO;
-    private DistributorsDAO distributorsDAO;
-    private FavoritsDAO favoritsDAO;
-    private UsersDAO usersDAO;
+    private final ProductsDAO productsDAO;
+    private final DistributorsDAO distributorsDAO;
+    private final FavoritsDAO favoritsDAO;
+    private final UsersDAO usersDAO;
 
     private ExecutorService executerservice;
-    private Handler mainThreadHandler;
+    private final Handler mainThreadHandler;
     private PropertyChangeSupport propertychangesupport;
-    private Repository instance;
+    private static Repository instance;
 
 
     private List<Products> productslist;
@@ -46,17 +49,24 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
     private UserRepository userRepository;
     private Users activuser;
 
-    private Repository() {
+    private Repository(Application app) {
         Executors.newFixedThreadPool(4);
         mainThreadHandler = HandlerCompat.createAsync(Looper.getMainLooper());
-        HttpCookie userLiveData;
-        userRepository = userRepository.getInstance();
+        productsDAO = ProductsDatabase.getInstance(app).productsDao();
+        distributorsDAO = null;
+        favoritsDAO = null;
+        usersDAO = null;
+    }
+
+    @Override
+    public void setActivUser() {
+        userRepository = UserRepository.getInstance();
         activuser.setUserID(userRepository.getCurrentUser().getValue().getUid());
     }
 
-    public Repository getinstance() {
+    public static Repository getInstance(Application app) {
         if (instance == null) {
-            instance = new Repository();
+            instance = new Repository(app);
         }
         return instance;
     }

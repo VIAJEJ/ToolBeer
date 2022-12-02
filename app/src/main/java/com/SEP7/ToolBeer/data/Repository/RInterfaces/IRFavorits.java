@@ -2,7 +2,7 @@ package com.SEP7.ToolBeer.data.Repository.RInterfaces;
 
 public interface IRFavorits {
 
-    public void getFavorits();
+    void getFavorits();
 
-    public void addFavorit(int prodID);
+    void addFavorit(int prodID);
 }

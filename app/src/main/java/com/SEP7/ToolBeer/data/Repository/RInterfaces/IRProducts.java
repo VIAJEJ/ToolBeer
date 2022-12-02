@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface IRProducts {
 
-    public void getProducts();
+    void getProducts();
 }

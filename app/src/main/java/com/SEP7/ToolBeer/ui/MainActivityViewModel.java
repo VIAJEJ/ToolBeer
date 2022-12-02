@@ -5,22 +5,26 @@ import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
+import com.SEP7.ToolBeer.data.Repository.Repository;
 import com.SEP7.ToolBeer.data.Repository.UserRepository;
+import com.SEP7.ToolBeer.localDatabase.DAO.IRSetup;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Objects;
 
 public class MainActivityViewModel extends AndroidViewModel {
     private final UserRepository userRepository;
+    private IRSetup repository;
 
     public MainActivityViewModel(Application app){
         super(app);
         userRepository = UserRepository.getInstance(app);
 
+        repository = Repository.getInstance(app);
+        repository.setActivUser();
     }
 
     public void init() {
-        String userId = Objects.requireNonNull(userRepository.getCurrentUser().getValue()).getUid();
     }
 
     public LiveData<FirebaseUser> getCurrentUser(){

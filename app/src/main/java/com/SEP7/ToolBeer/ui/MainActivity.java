@@ -9,7 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import com.SEP7.ToolBeer.R;
 
+import com.SEP7.ToolBeer.data.Repository.Repository;
 import com.SEP7.ToolBeer.databinding.ActivityMenuBinding;
+import com.SEP7.ToolBeer.localDatabase.DAO.IRSetup;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -20,12 +22,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-
     private MainActivityViewModel viewModel;
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMenuBinding binding;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         viewModel.init();
         checkIfSignedIn();
         setContentView(R.layout.signin_activity);
+
+
 
         binding = ActivityMenuBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
