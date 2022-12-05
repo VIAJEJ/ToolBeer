@@ -8,32 +8,33 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.SEP7.ToolBeer.R;
-import com.SEP7.ToolBeer.data.Repository.RInterfaces.IRDistributors;
+import com.SEP7.ToolBeer.data.Repository.RInterfaces.IRFavorits;
 import com.SEP7.ToolBeer.data.Repository.Repository;
-import com.SEP7.ToolBeer.localDatabase.Entity.Distributors;
+import com.SEP7.ToolBeer.localDatabase.Entity.Products;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeSupport;
 import java.util.ArrayList;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class FavoritsRecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     private final View view;
-    private ArrayList<Distributors> forhandlereList = new ArrayList<>();
-    private final IRDistributors repository;
-    private final PropertyChangeSupport propertyChangeSupport;
+    private ArrayList<Products> favorits = new ArrayList<>();
+    private final IRFavorits repository;
 
-    public RecyclerViewAdapter(View view) {
+    public FavoritsRecyclerViewAdapter(View view) {
         repository = Repository.getInstance(null); //dette kan give problemer hvis det her er foeste gang den instancieres, dette skal lige foelges op paa
-        repository.collectDistributors();
+        repository.collectFavorits();
         this.view = view;
 
-        propertyChangeSupport = new PropertyChangeSupport(this);
-        repository.addPropertyChangeListener("eventDistributors", (PropertyChangeEvent evt) -> this.getDistriputors());
+        repository.addPropertyChangeListener("eventFavorits",
+                (PropertyChangeEvent evt) ->
+                        this.getFavorits()
+        );
     }
 
-    public void getDistriputors() {
-        forhandlereList = repository.getDistributors();
+    public void getFavorits() {
+        favorits = repository.getFavorits();
     }
 
 
@@ -47,13 +48,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.forhandlerNavn.setText(forhandlereList.get(position).getName() + ", "
-                //forhandlereList.get(position).getAdresse() + ", "
-                + forhandlereList.get(position).getOpeningHours() + ", " + forhandlereList.get(position).getWebsite());
+        holder.forhandlerNavn.setText(favorits.get(position).getProdName() + ", "
+                + favorits.get(position).getAlcoholP() + ", "
+                + favorits.get(position).getType());
     }
 
     @Override
     public int getItemCount() {
-        return forhandlereList.size();
+        return favorits.size();
     }
 }

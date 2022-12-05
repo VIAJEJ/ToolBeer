@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.SEP7.ToolBeer.R;
-import com.SEP7.ToolBeer.adapter.RecyclerViewAdapter;
+import com.SEP7.ToolBeer.adapter.DistributorsRecyclerViewAdapter;
 import com.SEP7.ToolBeer.databinding.FragmentProduktkatalogBinding;
 
 
@@ -32,7 +32,7 @@ public class ProduktkatalogFragment extends Fragment {
         recyclerView = root.findViewById(R.id.produktkatalog);
         recyclerView.hasFixedSize();
         recyclerView.setLayoutManager(new LinearLayoutManager(root.getContext()));
-        recyclerView.setAdapter(new RecyclerViewAdapter(root));
+        recyclerView.setAdapter(new DistributorsRecyclerViewAdapter(root));
 
         return root;
     }

@@ -99,7 +99,12 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
     }
 
     @Override
-    public void getProducts() {
+    public List<Products> getProducts() {
+        return productslist;
+    }
+
+    @Override
+    public void collectProducts() {
         executerservice.execute(() -> {
             List<Products> ps = productsDAO.getAllProducts();
             mainThreadHandler.post(() ->callbackProduct(ps));
@@ -120,7 +125,7 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
     }
 
     @Override
-    public void getFavorits() {
+    public void collectFavorits() {
         executerservice.execute(() -> {
             List<Favorits> fs = favoritsDAO.getAllFavorits(activuser.getUserID());
             List<Products> ps = productsDAO.getAllProducts();
@@ -161,5 +166,10 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
                 Log.d("call", "Der var en fejl i propertychangelistner");
                 break;
         }
+    }
+
+    @Override
+    public ArrayList<Products> getFavorits() {
+        return (ArrayList<Products>) favoritslist; //maybe this casting will give issues
     }
 }

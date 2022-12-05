@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.SEP7.ToolBeer.R;
-import com.SEP7.ToolBeer.adapter.RecyclerViewAdapter;
+import com.SEP7.ToolBeer.adapter.DistributorsRecyclerViewAdapter;
 import com.SEP7.ToolBeer.databinding.FragmentFavoritterBinding;
 
 public class FavoritterFragment extends Fragment {
@@ -31,7 +31,7 @@ public class FavoritterFragment extends Fragment {
         recyclerView = root.findViewById(R.id.favoritter);
         recyclerView.hasFixedSize();
         recyclerView.setLayoutManager(new LinearLayoutManager(root.getContext()));
-        recyclerView.setAdapter(new RecyclerViewAdapter(root));
+        recyclerView.setAdapter(new DistributorsRecyclerViewAdapter(root));
 
         return root;
     }
