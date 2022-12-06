@@ -1,5 +1,6 @@
 package com.SEP7.ToolBeer.adapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +46,7 @@ public class DistributorsRecyclerViewAdapter extends RecyclerView.Adapter<ViewHo
         return new ViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n") //supressing a warning, may be a better way to do it
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.forhandlerNavn.setText(forhandlereList.get(position).getName() + ", "
