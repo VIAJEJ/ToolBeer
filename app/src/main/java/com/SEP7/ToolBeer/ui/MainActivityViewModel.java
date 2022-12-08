@@ -12,14 +12,11 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivityViewModel extends AndroidViewModel {
     private final UserRepository userRepository;
-    private final IRSetup repository;
+
 
     public MainActivityViewModel(Application app) {
         super(app);
         userRepository = UserRepository.getInstance(app);
-
-        repository = Repository.getInstance(app);
-        repository.setActivUser();
     }
 
     public void init() {
