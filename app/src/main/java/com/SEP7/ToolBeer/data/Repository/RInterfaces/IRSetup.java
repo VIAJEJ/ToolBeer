@@ -1,4 +1,4 @@
-package com.SEP7.ToolBeer.localDatabase.DAO;
+package com.SEP7.ToolBeer.data.Repository.RInterfaces;
 
 import com.SEP7.ToolBeer.data.Repository.Repository;
 

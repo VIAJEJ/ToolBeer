@@ -10,8 +10,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.SEP7.ToolBeer.data.Repository.Repository;
-import com.SEP7.ToolBeer.localDatabase.DAO.IRSetup;
+import com.SEP7.ToolBeer.data.Repository.RInterfaces.IRSetup;
 import com.firebase.ui.auth.AuthUI;
 import com.SEP7.ToolBeer.R;
 
@@ -36,7 +35,7 @@ public class SignInActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this).get(SignInViewModel.class);
         checkIfSignedIn();
         setContentView(R.layout.signin_activity);
-        repository = viewModel.getRepository();
+        //repository = viewModel.getRepository();
     }
 
     private void checkIfSignedIn() {
@@ -48,7 +47,7 @@ public class SignInActivity extends AppCompatActivity {
 
     private void goToMainActivity() {
         startActivity(new Intent(this, MainActivity.class));
-        repository.setActivUser();
+        //repository.setActivUser();
         finish();
     }
 

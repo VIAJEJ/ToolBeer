@@ -9,9 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import com.SEP7.ToolBeer.R;
 
-import com.SEP7.ToolBeer.data.Repository.Repository;
 import com.SEP7.ToolBeer.databinding.ActivityMenuBinding;
-import com.SEP7.ToolBeer.localDatabase.DAO.IRSetup;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;

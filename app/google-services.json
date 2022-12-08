@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1067389806070-8jrpcqvuu9obb28013ighc8fl7dmbs95.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.SEP7.ToolBeer",
+            "certificate_hash": "b84304fb501eab44bfc7077b2cd1305e0d5ea8d5"
+          }
+        },
+        {
           "client_id": "1067389806070-vd1d6qv8uj3gk1eu7uq69eaqqbn0njoh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

@@ -14,7 +14,7 @@ import com.SEP7.ToolBeer.data.Repository.RInterfaces.IRUsers;
 
 import com.SEP7.ToolBeer.localDatabase.DAO.DistributorsDAO;
 import com.SEP7.ToolBeer.localDatabase.DAO.FavoritsDAO;
-import com.SEP7.ToolBeer.localDatabase.DAO.IRSetup;
+import com.SEP7.ToolBeer.data.Repository.RInterfaces.IRSetup;
 import com.SEP7.ToolBeer.localDatabase.DAO.ProductsDAO;
 import com.SEP7.ToolBeer.localDatabase.DAO.UsersDAO;
 import com.SEP7.ToolBeer.localDatabase.DistributorsDatabase;
@@ -58,20 +58,24 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
     private Users activuser;
 
     private Repository(Application app) {
-        Executors.newFixedThreadPool(4);
+        executerservice = Executors.newFixedThreadPool(4);
         mainThreadHandler = HandlerCompat.createAsync(Looper.getMainLooper());
+        propertychangesupport = new PropertyChangeSupport(this);
         productsDAO = ProductsDatabase.getInstance(app).productsDao();
         distributorsDAO = DistributorsDatabase.getInstance(app).distributorsDAO();
         favoritsDAO = FavoritsDatabase.getInstance(app).favoritsDAO();
         usersDAO = UsersDatabase.getInstance(app).usersDao();
         seed = Seed.getInstance();
+        activuser = new Users("tempstring", 5, null, null); //temp user data
     }
 
     @Override
     public void setActivUser() {
         userRepository = UserRepository.getInstance();
         executerservice.execute(()-> {
-            activuser.setUserID(userRepository.getCurrentUser().getValue().getUid());
+            activuser.setUserID("tempstringOverride"
+                    //userRepository.getCurrentUser().getValue().getUid()
+                    );
         });
     }
 
@@ -114,14 +118,16 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
     @Override
     public void collectDistributors() {
         executerservice.execute(() -> {
-            List<Distributors> ds = distributorsDAO.getAllDistributors();
-            mainThreadHandler.post(() ->callbackDistributors(ds));
+            List<Distributors> ds = new ArrayList<Distributors>();
+            ds.add(new Distributors("temp", "temp", "temp", "temp"));
+                    //distributorsDAO.getAllDistributors();
+            mainThreadHandler.post(() -> callbackDistributors((List<Distributors>) ds));
         });
     }
 
     @Override
     public ArrayList<Distributors> getDistributors() {
-        return null;
+        return (ArrayList<Distributors>)distributorslist;
     }
 
     @Override

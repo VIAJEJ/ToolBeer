@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class DistributorsRecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     private final View view;
-    private ArrayList<Distributors> forhandlereList = new ArrayList<>();
+    private ArrayList<Distributors> forhandlereList;
     private final IRDistributors repository;
     private final PropertyChangeSupport propertyChangeSupport; //boer maaske slettes
 
@@ -28,7 +28,7 @@ public class DistributorsRecyclerViewAdapter extends RecyclerView.Adapter<ViewHo
         repository = Repository.getInstance(null); //dette kan give problemer hvis det her er foeste gang den instancieres, dette skal lige foelges op paa
         repository.collectDistributors();
         this.view = view;
-
+        forhandlereList = new ArrayList<>();
         propertyChangeSupport = new PropertyChangeSupport(this);
         repository.addPropertyChangeListener("eventDistributors", (PropertyChangeEvent evt) -> this.getDistriputors());
     }
@@ -56,6 +56,6 @@ public class DistributorsRecyclerViewAdapter extends RecyclerView.Adapter<ViewHo
 
     @Override
     public int getItemCount() {
-        return forhandlereList.size();
+        return (forhandlereList == null) ? 0 : forhandlereList.size();
     }
 }

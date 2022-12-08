@@ -7,7 +7,7 @@ import androidx.lifecycle.LiveData;
 
 import com.SEP7.ToolBeer.data.Repository.Repository;
 import com.SEP7.ToolBeer.data.Repository.UserRepository;
-import com.SEP7.ToolBeer.localDatabase.DAO.IRSetup;
+import com.SEP7.ToolBeer.data.Repository.RInterfaces.IRSetup;
 import com.google.firebase.auth.FirebaseUser;
 
 public class SignInViewModel extends AndroidViewModel {
