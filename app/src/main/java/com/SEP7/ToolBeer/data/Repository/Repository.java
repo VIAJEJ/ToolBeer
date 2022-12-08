@@ -43,9 +43,9 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
     private final FavoritsDAO favoritsDAO;
     private final UsersDAO usersDAO;
 
-    private ExecutorService executerservice;
+    private final ExecutorService executerservice;
     private final Handler mainThreadHandler;
-    private PropertyChangeSupport propertychangesupport;
+    private final PropertyChangeSupport propertychangesupport;
     private static Repository instance;
 
 
@@ -55,10 +55,10 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
 
     private UserRepository userRepository;
     private final Seed seed;
-    private Users activuser;
+    private final Users activuser;
 
     private Repository(Application app) {
-        executerservice = Executors.newFixedThreadPool(4);
+        executerservice = Executors.newFixedThreadPool(6);
         mainThreadHandler = HandlerCompat.createAsync(Looper.getMainLooper());
         propertychangesupport = new PropertyChangeSupport(this);
         productsDAO = ProductsDatabase.getInstance(app).productsDao();
@@ -66,16 +66,30 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
         favoritsDAO = FavoritsDatabase.getInstance(app).favoritsDAO();
         usersDAO = UsersDatabase.getInstance(app).usersDao();
         seed = Seed.getInstance();
-        activuser = new Users("tempstring", 5, null, null); //temp user data
+        activuser = new Users("tempstring", 18, null, null); //temp user data to protect against null pointer exeptions, ikke koent men det virker
+
+        //comment this in to seed the local database
+        //seed();
     }
 
     @Override
     public void setActivUser() {
         userRepository = UserRepository.getInstance();
         executerservice.execute(()-> {
-            activuser.setUserID("tempstringOverride"
-                    //userRepository.getCurrentUser().getValue().getUid()
-                    );
+            activuser.setUserID(userRepository.getCurrentUser().getValue().getUid());
+        });
+    }
+
+    @Override
+    public void loadData() {
+        executerservice.execute(() -> {
+            List<Products> ps = productsDAO.getAllProducts();
+            mainThreadHandler.post(() ->callbackProduct(ps));
+        });
+        executerservice.execute(() -> {
+            List<Distributors> ds =
+                    distributorsDAO.getAllDistributors();
+            mainThreadHandler.post(() -> callbackDistributors(ds));
         });
     }
 
@@ -91,8 +105,7 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
         propertychangesupport.firePropertyChange("eventProducts",null,productslist);
     }
 
-
-    private void callbackFavortis(List<Products> favprods) {
+        private void callbackFavortis(List<Products> favprods) {
         this.favoritslist = favprods;
         propertychangesupport.firePropertyChange("eventFavorits",null,favoritslist);
     }
@@ -118,10 +131,9 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
     @Override
     public void collectDistributors() {
         executerservice.execute(() -> {
-            List<Distributors> ds = new ArrayList<Distributors>();
-            ds.add(new Distributors("temp", "temp", "temp", "temp"));
-                    //distributorsDAO.getAllDistributors();
-            mainThreadHandler.post(() -> callbackDistributors((List<Distributors>) ds));
+            List<Distributors> ds =
+                    distributorsDAO.getAllDistributors();
+            mainThreadHandler.post(() -> callbackDistributors(ds));
         });
     }
 
@@ -146,6 +158,11 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
             }
             mainThreadHandler.post(() ->callbackFavortis(favProd));
         });
+    }
+
+    @Override
+    public ArrayList<Products> getFavorits() {
+        return (ArrayList<Products>) favoritslist; //maybe this casting will give issues
     }
 
     @Override
@@ -174,8 +191,21 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
         }
     }
 
-    @Override
-    public ArrayList<Products> getFavorits() {
-        return (ArrayList<Products>) favoritslist; //maybe this casting will give issues
+       private void seed() {
+        executerservice.execute(() -> {
+                    ArrayList<Products> temp = seed.getProducts();
+                    for(Products p : temp) {
+                        productsDAO.insert(p);
+                    }
+                }
+        );
+        executerservice.execute(() -> {
+                    ArrayList<Distributors> temp = seed.getForhandlereAListe();
+                    for(Distributors d : temp) {
+                        distributorsDAO.insert(d);
+                    }
+                }
+        );
+
     }
 }

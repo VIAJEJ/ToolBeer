@@ -24,5 +24,5 @@ public class SignInViewModel extends AndroidViewModel {
         return userRepository.getCurrentUser();
     }
 
-    public IRSetup getRepository() { return repository;};
+    public IRSetup getRepository() { return repository;}
 }

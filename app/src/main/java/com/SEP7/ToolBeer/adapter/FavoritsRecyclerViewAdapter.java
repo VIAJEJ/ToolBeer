@@ -51,6 +51,6 @@ public class FavoritsRecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder
 
     @Override
     public int getItemCount() {
-        return favorits.size();
+        return (favorits == null) ? 0 : favorits.size();
     }
 }

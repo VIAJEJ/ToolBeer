@@ -13,5 +13,5 @@ public interface IRFavorits {
 
     void addPropertyChangeListener(String eventDistributors, PropertyChangeListener listener);
 
-    public ArrayList<Products> getFavorits();
+    ArrayList<Products> getFavorits();
 }
