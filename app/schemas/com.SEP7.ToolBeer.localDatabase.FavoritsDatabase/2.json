@@ -1,0 +1,41 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "8eee77cafc114cccc9eaa88b2e0d4392",
+    "entities": [
+      {
+        "tableName": "Favorits",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`protID` INTEGER NOT NULL, `userID` TEXT NOT NULL, PRIMARY KEY(`protID`, `userID`))",
+        "fields": [
+          {
+            "fieldPath": "protID",
+            "columnName": "protID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userID",
+            "columnName": "userID",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "protID",
+            "userID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8eee77cafc114cccc9eaa88b2e0d4392')"
+    ]
+  }
+}
