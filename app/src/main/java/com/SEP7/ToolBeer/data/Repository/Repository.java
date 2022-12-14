@@ -148,7 +148,6 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
             List<Favorits> fs = favoritsDAO.getAllFavorits(activuser.getUserID());
             List<Products> ps = productsDAO.getAllProducts();
             List<Products> favProd = new ArrayList<>();
-            //det her er virkelig slemt og grimt, men kun fordi vi ikke har en ralationel database. I en virkelig database kan dette fixes meget mere elegant med en join
             for(Favorits f : fs) {
                 for (Products p : ps) {
                     if (f.getProtID() == p.getProtID()) {
@@ -162,7 +161,7 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
 
     @Override
     public ArrayList<Products> getFavorits() {
-        return (ArrayList<Products>) favoritslist; //maybe this casting will give issues
+        return (ArrayList<Products>) favoritslist;
     }
 
     @Override
