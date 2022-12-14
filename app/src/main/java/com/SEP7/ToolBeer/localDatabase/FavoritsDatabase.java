@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase;
 import com.SEP7.ToolBeer.localDatabase.DAO.FavoritsDAO;
 import com.SEP7.ToolBeer.localDatabase.Entity.Favorits;
 
-@Database(entities = {Favorits.class}, version = 2)
+@Database(entities = {Favorits.class}, version = 3)
 public abstract class FavoritsDatabase extends RoomDatabase {
 
     private static FavoritsDatabase instance;

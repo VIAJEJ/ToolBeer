@@ -22,7 +22,6 @@ public class ProductsRecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder
     public ProductsRecyclerViewAdapter() {
         repository = Repository.getInstance(null);
         repository.collectProducts();
-
         repository.addPropertyChangeListener("eventProducts",
                 (PropertyChangeEvent evt) ->
                         this.getProducts()

@@ -147,10 +147,9 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
     public void collectFavorits() {
         executerservice.execute(() -> {
             List<Favorits> fs = favoritsDAO.getAllFavorits(activuser.getUserID());
-            List<Products> ps = productsDAO.getAllProducts();
             List<Products> favProd = new ArrayList<>();
             for(Favorits f : fs) {
-                for (Products p : ps) {
+                for (Products p : productslist) {
                     if (f.getProtID() == p.getProtID()) {
                         favProd.add(p);
                     }
@@ -206,5 +205,10 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
                     }
                 }
         );
+           executerservice.execute(() -> {
+                       Favorits favorit = new Favorits(2,activuser.getUserID());
+                           favoritsDAO.insert(favorit);
+                   }
+           );
     }
 }
