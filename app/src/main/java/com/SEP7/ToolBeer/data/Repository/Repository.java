@@ -66,7 +66,8 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
         favoritsDAO = FavoritsDatabase.getInstance(app).favoritsDAO();
         usersDAO = UsersDatabase.getInstance(app).usersDao();
         seed = Seed.getInstance();
-        activuser = new Users("tempstring", 18, null, null); //temp user data to protect against null pointer exeptions, ikke koent men det virker
+        activuser = new Users("tempstring", 18, null, null);
+        //temp user data to protect against null pointer exeptions
 
         //comment this in to seed the local database
         //seed();
