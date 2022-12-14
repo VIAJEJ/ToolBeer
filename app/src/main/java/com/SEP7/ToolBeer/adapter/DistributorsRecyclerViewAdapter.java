@@ -19,15 +19,13 @@ import java.util.ArrayList;
 
 public class DistributorsRecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-    private final View view;
     private ArrayList<Distributors> forhandlereList;
     private final IRDistributors repository;
     private final PropertyChangeSupport propertyChangeSupport; //boer maaske slettes
 
-    public DistributorsRecyclerViewAdapter(View view) {
+    public DistributorsRecyclerViewAdapter() {
         repository = Repository.getInstance(null); //dette kan give problemer hvis det her er foeste gang den instancieres, dette skal lige foelges op paa
         repository.collectDistributors();
-        this.view = view;
         forhandlereList = new ArrayList<>();
         propertyChangeSupport = new PropertyChangeSupport(this);
         repository.addPropertyChangeListener("eventDistributors", (PropertyChangeEvent evt) -> this.getDistriputors());

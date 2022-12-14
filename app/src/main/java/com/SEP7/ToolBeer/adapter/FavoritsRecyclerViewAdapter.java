@@ -14,14 +14,12 @@ import java.util.ArrayList;
 
 public class FavoritsRecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-    private final View view;
     private ArrayList<Products> favorits = new ArrayList<>();
     private final IRFavorits repository;
 
-    public FavoritsRecyclerViewAdapter(View view) {
+    public FavoritsRecyclerViewAdapter() {
         repository = Repository.getInstance(null); //dette kan give problemer hvis det her er foeste gang den instancieres, dette skal lige foelges op paa
         repository.collectFavorits();
-        this.view = view;
 
         repository.addPropertyChangeListener("eventFavorits",
                 (PropertyChangeEvent evt) ->

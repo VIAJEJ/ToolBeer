@@ -1,5 +1,6 @@
 package com.SEP7.ToolBeer.adapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,14 +15,13 @@ import java.util.ArrayList;
 
 public class ProductsRecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-    private final View view;
+
     private ArrayList<Products> products = new ArrayList<>();
     private final IRProducts repository;
 
-    public ProductsRecyclerViewAdapter(View view) {
-        repository = Repository.getInstance(null); //dette kan give problemer hvis det her er foeste gang den instancieres, dette skal lige foelges op paa
+    public ProductsRecyclerViewAdapter() {
+        repository = Repository.getInstance(null);
         repository.collectProducts();
-        this.view = view;
 
         repository.addPropertyChangeListener("eventProducts",
                 (PropertyChangeEvent evt) ->
@@ -42,6 +42,7 @@ public class ProductsRecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder
         return new ViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.forhandlerNavn.setText(products.get(position).getProdName() + ", "

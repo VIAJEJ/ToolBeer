@@ -48,7 +48,6 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
     private final PropertyChangeSupport propertychangesupport;
     private static Repository instance;
 
-
     private List<Products> productslist;
     private List<Distributors> distributorslist;
     private List<Products> favoritslist;
@@ -78,6 +77,7 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
         userRepository = UserRepository.getInstance();
         executerservice.execute(()-> {
             activuser.setUserID(userRepository.getCurrentUser().getValue().getUid());
+            usersDAO.insert(activuser);
         });
     }
 
@@ -206,6 +206,5 @@ public class Repository implements IRProducts, IRUsers, IRFavorits, IRDistributo
                     }
                 }
         );
-
     }
 }

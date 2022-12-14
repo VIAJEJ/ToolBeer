@@ -33,7 +33,7 @@ public class ProduktkatalogFragment extends Fragment {
         recyclerView = root.findViewById(R.id.produktkatalog);
         recyclerView.hasFixedSize();
         recyclerView.setLayoutManager(new LinearLayoutManager(root.getContext()));
-        recyclerView.setAdapter(new ProductsRecyclerViewAdapter((root)));
+        recyclerView.setAdapter(new ProductsRecyclerViewAdapter());
 
         return root;
     }

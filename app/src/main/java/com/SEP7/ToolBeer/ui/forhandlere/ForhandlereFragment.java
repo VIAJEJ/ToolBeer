@@ -32,7 +32,7 @@ public class ForhandlereFragment extends Fragment {
         recyclerView = root.findViewById(R.id.forhandler);
         recyclerView.hasFixedSize();
         recyclerView.setLayoutManager(new LinearLayoutManager(root.getContext()));
-        recyclerView.setAdapter(new DistributorsRecyclerViewAdapter(root));
+        recyclerView.setAdapter(new DistributorsRecyclerViewAdapter());
 
        return root;
     }
