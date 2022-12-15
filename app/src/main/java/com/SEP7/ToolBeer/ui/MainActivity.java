@@ -37,17 +37,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMenu.toolbar);
+
         binding.appBarMenu.fab.setOnClickListener(view -> {
             String url = "https://toolbeer.dk/collections/beer?";
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
             startActivity(i);
         });
+
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
-
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_produktkatalog, R.id.nav_favoritter, R.id.nav_forhandlere, R.id.nav_find_forhandler, R.id.nav_om_ToolBeer, R.id.nav_indstillinger)
+                R.id.nav_produktkatalog, R.id.nav_favoritter, R.id.nav_forhandlere,
+                R.id.nav_find_forhandler, R.id.nav_om_ToolBeer, R.id.nav_indstillinger)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_menu);

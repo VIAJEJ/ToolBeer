@@ -15,7 +15,6 @@ import java.util.ArrayList;
 
 public class ProductsRecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-
     private ArrayList<Products> products = new ArrayList<>();
     private final IRProducts repository;
 

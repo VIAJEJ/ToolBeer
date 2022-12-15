@@ -30,13 +30,6 @@ public class IndstillingerFragment extends Fragment implements View.OnClickListe
 
     public static boolean veryFirstCreation = true;
 
-    public IndstillingerFragment() {
-    }
-
-    public static IndstillingerFragment newInstance(String param1, String param2) {
-        return new IndstillingerFragment();
-    }
-
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -114,7 +107,6 @@ public class IndstillingerFragment extends Fragment implements View.OnClickListe
             requireActivity().recreate();
 
             requireActivity().getBaseContext().getResources().updateConfiguration(config, requireActivity().getBaseContext().getResources().getDisplayMetrics());
-
         }
         if (view.getId() == R.id.imageButton_English) {
 
@@ -130,7 +122,5 @@ public class IndstillingerFragment extends Fragment implements View.OnClickListe
             requireActivity().getBaseContext().getResources().updateConfiguration(config, requireActivity().getBaseContext().getResources().getDisplayMetrics());
         }
     }
-
-
-    }
+}
 

@@ -4,6 +4,7 @@ import android.app.Application;
 
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.SEP7.ToolBeer.data.Repository.UserRepository;
 import com.google.firebase.auth.FirebaseUser;
